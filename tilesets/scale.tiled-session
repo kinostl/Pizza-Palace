@@ -1,0 +1,45 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "box3.tmx": {
+            "scale": 17.575,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 3.470839260312946,
+                "y": 23.897581792318633
+            }
+        },
+        "untitled.tmx": {
+            "scale": 5.858333333333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 80.05689900426741,
+                "y": 72.03413940256046
+            }
+        },
+        "untitled.tmx#monochrome_tilemap": {
+            "scaleInDock": 1
+        }
+    },
+    "last.externalTilesetPath": "/home/zone/Documents/Game Off 2023 Scratchpad",
+    "map.height": 2,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 3,
+    "openFiles": [
+    ],
+    "project": "scale.tiled-project",
+    "recentFiles": [
+        "box3.tmx"
+    ]
+}

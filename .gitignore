@@ -1,0 +1,14 @@
+*
+
+!*/
+
+
+# track this file
+
+
+!.gitignore
+
+!Game Off 2023 Scratchpad.gbsproj
+!assets/**
+!tilesets/**
+!plugins/**
