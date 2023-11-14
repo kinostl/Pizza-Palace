@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="monochrome_tilemap" tilewidth="16" tileheight="16" spacing="1" tilecount="400" columns="20">
- <image source="1bit_platformer/Tilemap/monochrome_tilemap.png" width="339" height="339"/>
+<tileset version="1.10" tiledversion="1.10.2" name="platformer" tilewidth="16" tileheight="16" tilecount="400" columns="20">
+ <image source="platformer.png" trans="071821" width="320" height="320"/>
  <wangsets>
   <wangset name="Safety Box" type="mixed" tile="-1">
    <wangcolor name="" color="#ff0000" tile="-1" probability="1"/>
