@@ -9016,7 +9016,7 @@
                     "command": "EVENT_GROUP",
                     "args": {
                         "__label": "Initialize Vars",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -9186,9 +9186,9 @@
                                     "choices": 3,
                                     "__collapseCase0": false,
                                     "value0": 1,
-                                    "__collapseCase1": false,
+                                    "__collapseCase1": true,
                                     "value1": 2,
-                                    "__collapseCase2": false,
+                                    "__collapseCase2": true,
                                     "value2": 3,
                                     "__collapseCase3": false,
                                     "value3": 4,
@@ -9218,7 +9218,7 @@
                                     "value15": 16,
                                     "__collapseElse": false,
                                     "__disableElse": true,
-                                    "__collapse": true,
+                                    "__collapse": false,
                                     "__label": "Display Menu"
                                 },
                                 "children": {
@@ -9267,29 +9267,29 @@
                                                 "option5_r": 0,
                                                 "option5_u": 0,
                                                 "option5_d": 0,
-                                                "option_6_text": "$100",
-                                                "option6_x": 14,
+                                                "option_6_text": "$10",
+                                                "option6_x": 15,
                                                 "option6_y": 1,
                                                 "option6_l": 0,
                                                 "option6_r": 0,
                                                 "option6_u": 0,
                                                 "option6_d": 0,
-                                                "option_7_text": "$500",
-                                                "option7_x": 14,
+                                                "option_7_text": "$50",
+                                                "option7_x": 15,
                                                 "option7_y": 2,
                                                 "option7_l": 0,
                                                 "option7_r": 0,
                                                 "option7_u": 0,
                                                 "option7_d": 0,
-                                                "option_8_text": "$1000",
-                                                "option8_x": 13,
+                                                "option_8_text": "$100",
+                                                "option8_x": 14,
                                                 "option8_y": 3,
                                                 "option8_l": 0,
                                                 "option8_r": 0,
                                                 "option8_u": 0,
                                                 "option8_d": 0,
-                                                "option_9_text": "$5000",
-                                                "option9_x": 13,
+                                                "option_9_text": "$500",
+                                                "option9_x": 14,
                                                 "option9_y": 4,
                                                 "option9_l": 0,
                                                 "option9_r": 0,
@@ -9344,7 +9344,7 @@
                                                 "option16_r": 0,
                                                 "option16_u": 0,
                                                 "option16_d": 0,
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "id": "85ee39f0-2ee1-4477-8baf-ae37aeda7294"
                                         }
@@ -9621,15 +9621,57 @@
                                 "id": "acdd72ad-1592-4afd-ae26-6404ff896ba3"
                             },
                             {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "T0",
+                                    "operator": ">",
+                                    "comparator": "0",
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_SOUND_PLAY_EFFECT",
+                                            "args": {
+                                                "type": "e8d91b86-7e75-4587-a710-02c919174d59",
+                                                "priority": "high",
+                                                "pitch": 4,
+                                                "frequency": 200,
+                                                "duration": 0.5,
+                                                "wait": true,
+                                                "effect": 8
+                                            },
+                                            "id": "29cc084a-ef4a-47c8-9898-1cba372921ef"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_SOUND_PLAY_EFFECT",
+                                            "args": {
+                                                "type": "4d116d69-0491-4c18-828b-0528f6ea6859",
+                                                "priority": "high",
+                                                "pitch": 4,
+                                                "frequency": 200,
+                                                "duration": 0.5,
+                                                "wait": true,
+                                                "effect": 8
+                                            },
+                                            "id": "049437b3-1b25-4a20-97c4-b1495d64ad70"
+                                        }
+                                    ]
+                                },
+                                "id": "1e59960e-3bb3-4431-b4c2-850a0a1864ff"
+                            },
+                            {
                                 "command": "EVENT_SWITCH",
                                 "args": {
                                     "variable": "14",
                                     "choices": 3,
                                     "__collapseCase0": false,
                                     "value0": 1,
-                                    "__collapseCase1": false,
+                                    "__collapseCase1": true,
                                     "value1": 2,
-                                    "__collapseCase2": false,
+                                    "__collapseCase2": true,
                                     "value2": 3,
                                     "__collapseCase3": false,
                                     "value3": 4,
@@ -9665,48 +9707,6 @@
                                 "children": {
                                     "true0": [
                                         {
-                                            "command": "EVENT_IF_VALUE",
-                                            "args": {
-                                                "variable": "T0",
-                                                "operator": ">",
-                                                "comparator": "0",
-                                                "__collapseElse": false
-                                            },
-                                            "children": {
-                                                "true": [
-                                                    {
-                                                        "command": "EVENT_SOUND_PLAY_EFFECT",
-                                                        "args": {
-                                                            "type": "e8d91b86-7e75-4587-a710-02c919174d59",
-                                                            "priority": "high",
-                                                            "pitch": 4,
-                                                            "frequency": 200,
-                                                            "duration": 0.5,
-                                                            "wait": true,
-                                                            "effect": 8
-                                                        },
-                                                        "id": "29cc084a-ef4a-47c8-9898-1cba372921ef"
-                                                    }
-                                                ],
-                                                "false": [
-                                                    {
-                                                        "command": "EVENT_SOUND_PLAY_EFFECT",
-                                                        "args": {
-                                                            "type": "4d116d69-0491-4c18-828b-0528f6ea6859",
-                                                            "priority": "high",
-                                                            "pitch": 4,
-                                                            "frequency": 200,
-                                                            "duration": 0.5,
-                                                            "wait": true,
-                                                            "effect": 8
-                                                        },
-                                                        "id": "049437b3-1b25-4a20-97c4-b1495d64ad70"
-                                                    }
-                                                ]
-                                            },
-                                            "id": "1e59960e-3bb3-4431-b4c2-850a0a1864ff"
-                                        },
-                                        {
                                             "command": "EVENT_SWITCH",
                                             "args": {
                                                 "variable": "T0",
@@ -9714,13 +9714,13 @@
                                                 "__collapseCase0": false,
                                                 "value0": 1,
                                                 "__collapseCase1": false,
-                                                "value1": 4,
+                                                "value1": 2,
                                                 "__collapseCase2": true,
-                                                "value2": 2,
-                                                "__collapseCase3": true,
-                                                "value3": 3,
+                                                "value2": 3,
+                                                "__collapseCase3": false,
+                                                "value3": 4,
                                                 "__collapseCase4": false,
-                                                "value4": 5,
+                                                "value4": 4,
                                                 "__collapseCase5": false,
                                                 "value5": 6,
                                                 "__collapseCase6": false,
@@ -9752,217 +9752,482 @@
                                             "children": {
                                                 "true0": [
                                                     {
-                                                        "command": "EVENT_GROUP",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
                                                         "args": {
-                                                            "__label": "Unlock Ward 1 - 2D",
+                                                            "variable": "25",
+                                                            "flag": 0,
+                                                            "__collapseElse": false,
                                                             "__collapse": false
                                                         },
                                                         "children": {
                                                             "true": [
                                                                 {
-                                                                    "command": "EVENT_TEXT",
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                     "args": {
-                                                                        "text": [
-                                                                            "Demand Increased &\nCompetitor arrives"
-                                                                        ],
-                                                                        "avatarId": "",
-                                                                        "__collapse": true
+                                                                        "customEventId": "d2cd72c9-a5fd-4249-9b01-91795d3eca99"
                                                                     },
-                                                                    "id": "e7ace7bd-fe80-4252-a9db-32de39ec5e2a"
-                                                                },
+                                                                    "id": "f27edc1f-2656-4e92-99ea-3cd9c4e5cd2e"
+                                                                }
+                                                            ],
+                                                            "false": [
                                                                 {
-                                                                    "command": "EVENT_ACTOR_ACTIVATE",
+                                                                    "command": "EVENT_GROUP",
                                                                     "args": {
-                                                                        "actorId": "6d7543c8-66bf-4f41-8dc0-65e7d38e2d17"
+                                                                        "__label": "Unlock Ward 1 - 2D",
+                                                                        "__collapse": false
                                                                     },
-                                                                    "id": "458556ad-59a2-4b75-9b42-987c5d2ef55e"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_ACTOR_ACTIVATE",
-                                                                    "args": {
-                                                                        "actorId": "9ea51310-ee7c-4915-b970-f05513916a6e"
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "25",
+                                                                                    "flag1": true,
+                                                                                    "flag2": false,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "7ce8e9ed-c5ff-425f-aa18-36ab133afb52"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                                "args": {
+                                                                                    "vectorX": "4",
+                                                                                    "operation": "sub",
+                                                                                    "other": "val",
+                                                                                    "vectorY": "L0",
+                                                                                    "value": 1,
+                                                                                    "minValue": "0",
+                                                                                    "maxValue": "32767",
+                                                                                    "clamp": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "a0d7c048-0adc-4a40-8a69-b01ea387cde0"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "Demand Increased &\nCompetitor arrives"
+                                                                                    ],
+                                                                                    "avatarId": "",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "e7ace7bd-fe80-4252-a9db-32de39ec5e2a"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_ACTIVATE",
+                                                                                "args": {
+                                                                                    "actorId": "6d7543c8-66bf-4f41-8dc0-65e7d38e2d17",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "458556ad-59a2-4b75-9b42-987c5d2ef55e"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_ACTIVATE",
+                                                                                "args": {
+                                                                                    "actorId": "9ea51310-ee7c-4915-b970-f05513916a6e",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "272ca8e4-0c6a-42c3-b4d9-b61ad8c366e0"
+                                                                            }
+                                                                        ]
                                                                     },
-                                                                    "id": "272ca8e4-0c6a-42c3-b4d9-b61ad8c366e0"
+                                                                    "id": "ae6050d1-4db6-4673-aced-e4f0eaba6164"
                                                                 }
                                                             ]
                                                         },
-                                                        "id": "ae6050d1-4db6-4673-aced-e4f0eaba6164"
+                                                        "id": "d6e8e5dc-21ff-4cb6-8978-c90e450596b8"
                                                     }
                                                 ],
                                                 "true1": [
                                                     {
-                                                        "command": "EVENT_GROUP",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
                                                         "args": {
-                                                            "__label": "Unlock Ward 2 & Ward 2 - 1D",
+                                                            "variable": "25",
+                                                            "flag": 1,
+                                                            "__collapseElse": false,
                                                             "__collapse": false
                                                         },
                                                         "children": {
                                                             "true": [
                                                                 {
-                                                                    "command": "EVENT_ADD_FLAGS",
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                     "args": {
-                                                                        "variable": "13",
-                                                                        "flag1": false,
-                                                                        "flag2": true,
-                                                                        "flag3": false,
-                                                                        "flag4": false,
-                                                                        "flag5": false,
-                                                                        "flag6": false,
-                                                                        "flag7": false,
-                                                                        "flag8": false,
-                                                                        "flag9": false,
-                                                                        "flag10": false,
-                                                                        "flag11": false,
-                                                                        "flag12": false,
-                                                                        "flag13": false,
-                                                                        "flag14": false,
-                                                                        "flag15": false,
-                                                                        "flag16": false,
-                                                                        "__collapse": false
+                                                                        "customEventId": "d2cd72c9-a5fd-4249-9b01-91795d3eca99"
                                                                     },
-                                                                    "id": "42b8d02a-d982-48e9-9307-5d3a79a29b00"
-                                                                },
+                                                                    "id": "ff4eaca8-684b-42b3-a983-80b7a1001c68"
+                                                                }
+                                                            ],
+                                                            "false": [
                                                                 {
-                                                                    "command": "EVENT_ACTOR_START_UPDATE",
+                                                                    "command": "EVENT_GROUP",
                                                                     "args": {
-                                                                        "actorId": "62f48ddc-e169-4b63-87d1-49c5ec63b0f5",
+                                                                        "__label": "Unlock Speed Boost",
                                                                         "__collapse": true
                                                                     },
-                                                                    "id": "c381048d-d09c-452f-8ace-575d370fe09a"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_PALETTE_SET_BACKGROUND",
-                                                                    "args": {
-                                                                        "palette0": "keep",
-                                                                        "palette1": "default-bg-2",
-                                                                        "palette2": "keep",
-                                                                        "palette3": "keep",
-                                                                        "palette4": "keep",
-                                                                        "palette5": "keep",
-                                                                        "palette6": "keep",
-                                                                        "palette7": "keep",
-                                                                        "__collapse": true
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "25",
+                                                                                    "flag1": false,
+                                                                                    "flag2": true,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "681d0e17-8a8d-4277-b258-b040c544da97"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                                "args": {
+                                                                                    "vectorX": "4",
+                                                                                    "operation": "sub",
+                                                                                    "other": "val",
+                                                                                    "vectorY": "L0",
+                                                                                    "value": 5,
+                                                                                    "minValue": "0",
+                                                                                    "maxValue": "32767",
+                                                                                    "clamp": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "b6df8e51-220b-4668-9ad0-9daff6a01061"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "21",
+                                                                                    "flag1": true,
+                                                                                    "flag2": false,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "b8c8cec1-c823-4fac-90aa-f424c290bbf9"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_IDLE",
+                                                                                "args": {
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "cc4480b9-a656-4b3b-b84e-82473e9aa274"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                                                                                "args": {
+                                                                                    "actorId": "$self$",
+                                                                                    "speed": 2,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "cc5ca6ed-d979-42d3-967c-63641058d43c"
+                                                                            }
+                                                                        ]
                                                                     },
-                                                                    "id": "11847d0d-2e3a-432e-9719-948144b6286c"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_REMOVE_INPUT_SCRIPT",
-                                                                    "args": {
-                                                                        "input": [
-                                                                            "right"
-                                                                        ],
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "8fae7080-3c9f-4283-b476-48c28ced46f2"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
-                                                                    "args": {
-                                                                        "actorId": "9ea51310-ee7c-4915-b970-f05513916a6e",
-                                                                        "speed": 1,
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "dd85f34d-f634-458b-8ae2-19a4231d4bf4"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_TEXT",
-                                                                    "args": {
-                                                                        "text": [
-                                                                            "Ward 2 Unlocks &\nCompetitor Faster"
-                                                                        ],
-                                                                        "avatarId": ""
-                                                                    },
-                                                                    "id": "33a9f39c-1d2d-40ed-aae7-2aaad4046581"
+                                                                    "id": "864199ac-930f-416b-b7ca-a374aad24434"
                                                                 }
                                                             ]
                                                         },
-                                                        "id": "5a07fad9-0e95-446e-85ae-87f1739f9901"
+                                                        "id": "91af7a91-709b-425f-9ed0-ba2121f3e0ab"
                                                     }
                                                 ],
                                                 "true2": [
                                                     {
-                                                        "command": "EVENT_GROUP",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
                                                         "args": {
-                                                            "__label": "Unlock Speed Boost"
+                                                            "variable": "25",
+                                                            "flag": 2,
+                                                            "__collapseElse": false,
+                                                            "__collapse": true
                                                         },
                                                         "children": {
                                                             "true": [
                                                                 {
-                                                                    "command": "EVENT_ADD_FLAGS",
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                     "args": {
-                                                                        "variable": "21",
-                                                                        "flag1": true,
-                                                                        "flag2": false,
-                                                                        "flag3": false,
-                                                                        "flag4": false,
-                                                                        "flag5": false,
-                                                                        "flag6": false,
-                                                                        "flag7": false,
-                                                                        "flag8": false,
-                                                                        "flag9": false,
-                                                                        "flag10": false,
-                                                                        "flag11": false,
-                                                                        "flag12": false,
-                                                                        "flag13": false,
-                                                                        "flag14": false,
-                                                                        "flag15": false,
-                                                                        "flag16": false,
-                                                                        "__collapse": true
+                                                                        "customEventId": "d2cd72c9-a5fd-4249-9b01-91795d3eca99"
                                                                     },
-                                                                    "id": "b8c8cec1-c823-4fac-90aa-f424c290bbf9"
+                                                                    "id": "6008dd79-ad14-4995-91a2-814979ddb4f9"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "Handle Purchase"
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "25",
+                                                                                    "flag1": false,
+                                                                                    "flag2": false,
+                                                                                    "flag3": true,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false
+                                                                                },
+                                                                                "id": "bdab39d1-6b5a-4c3f-93fc-071190fedeae"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                                "args": {
+                                                                                    "vectorX": "4",
+                                                                                    "operation": "sub",
+                                                                                    "other": "val",
+                                                                                    "vectorY": "L0",
+                                                                                    "value": 10,
+                                                                                    "minValue": "0",
+                                                                                    "maxValue": "32767",
+                                                                                    "clamp": false
+                                                                                },
+                                                                                "id": "8c31e3a0-8de3-49f8-8988-c4ea85881484"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "f612e5ae-0122-4e45-9194-ea290780313c"
                                                                 },
                                                                 {
-                                                                    "command": "EVENT_IDLE",
-                                                                    "args": {},
-                                                                    "id": "cc4480b9-a656-4b3b-b84e-82473e9aa274"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                                                                    "command": "EVENT_GROUP",
                                                                     "args": {
-                                                                        "actorId": "$self$",
-                                                                        "speed": 2,
-                                                                        "__collapse": true
+                                                                        "__label": "Unlock Ward 1 Shop",
+                                                                        "__collapse": false
                                                                     },
-                                                                    "id": "cc5ca6ed-d979-42d3-967c-63641058d43c"
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_SET_POSITION",
+                                                                                "args": {
+                                                                                    "actorId": "e8b909ff-1270-47d1-ad0d-0ae539465bb3",
+                                                                                    "x": {
+                                                                                        "type": "number",
+                                                                                        "value": 20
+                                                                                    },
+                                                                                    "y": {
+                                                                                        "type": "number",
+                                                                                        "value": 27
+                                                                                    },
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "48f6f0d9-6f42-4a51-adc5-82becb69236e"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_ACTIVATE",
+                                                                                "args": {
+                                                                                    "actorId": "e8b909ff-1270-47d1-ad0d-0ae539465bb3",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "fed23fbe-0a62-4bcb-8ad7-74234a848c14"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "0d337ec0-70a1-4bbb-ab8a-94c6611c5b03"
                                                                 }
                                                             ]
                                                         },
-                                                        "id": "864199ac-930f-416b-b7ca-a374aad24434"
+                                                        "id": "e90953d5-1150-4880-8d5a-4b26fb7f6966"
                                                     }
                                                 ],
                                                 "true3": [
                                                     {
-                                                        "command": "EVENT_GROUP",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
                                                         "args": {
-                                                            "__label": "Unlock Ward 1 Shop"
+                                                            "variable": "25",
+                                                            "flag": 3,
+                                                            "__collapseElse": false,
+                                                            "__collapse": true
                                                         },
                                                         "children": {
                                                             "true": [
                                                                 {
-                                                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                     "args": {
-                                                                        "actorId": "e8b909ff-1270-47d1-ad0d-0ae539465bb3",
-                                                                        "x": {
-                                                                            "type": "number",
-                                                                            "value": 20
-                                                                        },
-                                                                        "y": {
-                                                                            "type": "number",
-                                                                            "value": 27
-                                                                        }
+                                                                        "customEventId": "d2cd72c9-a5fd-4249-9b01-91795d3eca99"
                                                                     },
-                                                                    "id": "48f6f0d9-6f42-4a51-adc5-82becb69236e"
-                                                                },
+                                                                    "id": "8a699f73-4c33-4668-b578-42965a21a3b1"
+                                                                }
+                                                            ],
+                                                            "false": [
                                                                 {
-                                                                    "command": "EVENT_ACTOR_ACTIVATE",
+                                                                    "command": "EVENT_GROUP",
                                                                     "args": {
-                                                                        "actorId": "e8b909ff-1270-47d1-ad0d-0ae539465bb3"
+                                                                        "__label": "Unlock Ward 2 & Ward 2 - 1D",
+                                                                        "__collapse": false
                                                                     },
-                                                                    "id": "fed23fbe-0a62-4bcb-8ad7-74234a848c14"
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "25",
+                                                                                    "flag1": false,
+                                                                                    "flag2": false,
+                                                                                    "flag3": false,
+                                                                                    "flag4": true,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "95f265c3-2865-47cc-b57a-d6d977c2a6df"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                                "args": {
+                                                                                    "vectorX": "4",
+                                                                                    "operation": "sub",
+                                                                                    "other": "val",
+                                                                                    "vectorY": "L0",
+                                                                                    "value": 50,
+                                                                                    "minValue": "0",
+                                                                                    "maxValue": "32767",
+                                                                                    "clamp": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "8b779370-792d-4d7b-b5bd-ea78f6e597ca"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "13",
+                                                                                    "flag1": false,
+                                                                                    "flag2": true,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "42b8d02a-d982-48e9-9307-5d3a79a29b00"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_START_UPDATE",
+                                                                                "args": {
+                                                                                    "actorId": "62f48ddc-e169-4b63-87d1-49c5ec63b0f5",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "c381048d-d09c-452f-8ace-575d370fe09a"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_PALETTE_SET_BACKGROUND",
+                                                                                "args": {
+                                                                                    "palette0": "keep",
+                                                                                    "palette1": "default-bg-2",
+                                                                                    "palette2": "keep",
+                                                                                    "palette3": "keep",
+                                                                                    "palette4": "keep",
+                                                                                    "palette5": "keep",
+                                                                                    "palette6": "keep",
+                                                                                    "palette7": "keep",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "11847d0d-2e3a-432e-9719-948144b6286c"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_REMOVE_INPUT_SCRIPT",
+                                                                                "args": {
+                                                                                    "input": [
+                                                                                        "right"
+                                                                                    ],
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "8fae7080-3c9f-4283-b476-48c28ced46f2"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                                                                                "args": {
+                                                                                    "actorId": "9ea51310-ee7c-4915-b970-f05513916a6e",
+                                                                                    "speed": 1,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "dd85f34d-f634-458b-8ae2-19a4231d4bf4"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "Ward 2 Unlocks &\nCompetitor Faster"
+                                                                                    ],
+                                                                                    "avatarId": ""
+                                                                                },
+                                                                                "id": "33a9f39c-1d2d-40ed-aae7-2aaad4046581"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "5a07fad9-0e95-446e-85ae-87f1739f9901"
                                                                 }
                                                             ]
                                                         },
-                                                        "id": "0d337ec0-70a1-4bbb-ab8a-94c6611c5b03"
+                                                        "id": "42820919-ee49-4f84-bb04-dc81ecd0804e"
                                                     }
                                                 ],
                                                 "true4": [],
@@ -22728,6 +22993,26 @@
                     "id": "856aa8d0-a152-4cf5-9ee3-157871b372b3"
                 }
             ]
+        },
+        {
+            "id": "d2cd72c9-a5fd-4249-9b01-91795d3eca99",
+            "name": "Already Purchased",
+            "description": "",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_11",
+            "script": [
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "You already \npurchased this"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "2a103ad1-4632-42da-87e3-9d44cbf090c2"
+                }
+            ]
         }
     ],
     "music": [
@@ -23834,6 +24119,11 @@
             "id": "66379cb4-0b94-482c-b319-cf6929e6116e__L0",
             "name": "Camera X",
             "symbol": "var_camera_x"
+        },
+        {
+            "id": "25",
+            "name": "PurchaseLocks",
+            "symbol": "var_purchaselocks"
         }
     ],
     "engineFieldValues": [
@@ -23883,8 +24173,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": "selected",
-        "worldScrollX": 0,
-        "worldScrollY": 530,
+        "worldScrollX": 110,
+        "worldScrollY": 106,
         "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
