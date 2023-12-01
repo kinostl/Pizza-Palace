@@ -9184,9 +9184,9 @@
                                 "args": {
                                     "variable": "14",
                                     "choices": 3,
-                                    "__collapseCase0": false,
+                                    "__collapseCase0": true,
                                     "value0": 1,
-                                    "__collapseCase1": true,
+                                    "__collapseCase1": false,
                                     "value1": 2,
                                     "__collapseCase2": true,
                                     "value2": 3,
@@ -9344,7 +9344,7 @@
                                                 "option16_r": 0,
                                                 "option16_u": 0,
                                                 "option16_d": 0,
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "id": "85ee39f0-2ee1-4477-8baf-ae37aeda7294"
                                         }
@@ -9394,28 +9394,28 @@
                                                 "option5_r": 0,
                                                 "option5_u": 0,
                                                 "option5_d": 0,
-                                                "option_6_text": "$500",
-                                                "option6_x": 14,
+                                                "option_6_text": "$20",
+                                                "option6_x": 15,
                                                 "option6_y": 1,
                                                 "option6_l": 0,
                                                 "option6_r": 0,
                                                 "option6_u": 0,
                                                 "option6_d": 0,
-                                                "option_7_text": "$1000",
-                                                "option7_x": 13,
+                                                "option_7_text": "$100",
+                                                "option7_x": 14,
                                                 "option7_y": 2,
                                                 "option7_l": 0,
                                                 "option7_r": 0,
                                                 "option7_u": 0,
                                                 "option7_d": 0,
-                                                "option_8_text": "$5000",
+                                                "option_8_text": "$200",
                                                 "option8_x": 13,
                                                 "option8_y": 3,
                                                 "option8_l": 0,
                                                 "option8_r": 0,
                                                 "option8_u": 0,
                                                 "option8_d": 0,
-                                                "option_9_text": "$10000",
+                                                "option_9_text": "$1000",
                                                 "option9_x": 12,
                                                 "option9_y": 4,
                                                 "option9_l": 0,
@@ -9626,7 +9626,8 @@
                                     "variable": "T0",
                                     "operator": ">",
                                     "comparator": "0",
-                                    "__collapseElse": false
+                                    "__collapseElse": false,
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -9667,9 +9668,9 @@
                                 "args": {
                                     "variable": "14",
                                     "choices": 3,
-                                    "__collapseCase0": false,
+                                    "__collapseCase0": true,
                                     "value0": 1,
-                                    "__collapseCase1": true,
+                                    "__collapseCase1": false,
                                     "value1": 2,
                                     "__collapseCase2": true,
                                     "value2": 3,
@@ -9711,13 +9712,13 @@
                                             "args": {
                                                 "variable": "T0",
                                                 "choices": 4,
-                                                "__collapseCase0": false,
+                                                "__collapseCase0": true,
                                                 "value0": 1,
-                                                "__collapseCase1": false,
+                                                "__collapseCase1": true,
                                                 "value1": 2,
                                                 "__collapseCase2": true,
                                                 "value2": 3,
-                                                "__collapseCase3": false,
+                                                "__collapseCase3": true,
                                                 "value3": 4,
                                                 "__collapseCase4": false,
                                                 "value4": 4,
@@ -9976,7 +9977,7 @@
                                                             "variable": "25",
                                                             "flag": 2,
                                                             "__collapseElse": false,
-                                                            "__collapse": true
+                                                            "__collapse": false
                                                         },
                                                         "children": {
                                                             "true": [
@@ -10255,11 +10256,11 @@
                                                 "choices": 4,
                                                 "__collapseCase0": true,
                                                 "value0": 1,
-                                                "__collapseCase1": false,
+                                                "__collapseCase1": true,
                                                 "value1": 2,
-                                                "__collapseCase2": false,
+                                                "__collapseCase2": true,
                                                 "value2": 3,
-                                                "__collapseCase3": false,
+                                                "__collapseCase3": true,
                                                 "value3": 4,
                                                 "__collapseCase4": false,
                                                 "value4": 5,
@@ -10294,379 +10295,674 @@
                                             "children": {
                                                 "true0": [
                                                     {
-                                                        "command": "EVENT_GROUP",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
                                                         "args": {
-                                                            "__label": "Unlock Ward 2 - 2D",
-                                                            "__collapse": false
+                                                            "variable": "25",
+                                                            "flag": 4,
+                                                            "__collapseElse": false,
+                                                            "__collapse": true
                                                         },
                                                         "children": {
                                                             "true": [
                                                                 {
-                                                                    "command": "EVENT_TEXT",
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                     "args": {
-                                                                        "text": [
-                                                                            "Demand Increased &\nCompetitor arrives"
-                                                                        ],
-                                                                        "avatarId": "",
-                                                                        "__collapse": true
+                                                                        "customEventId": "d2cd72c9-a5fd-4249-9b01-91795d3eca99"
                                                                     },
-                                                                    "id": "d6955fc9-3a96-4457-8955-ce2c2f6a952c"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_ADD_FLAGS",
-                                                                    "args": {
-                                                                        "variable": "22",
-                                                                        "flag1": false,
-                                                                        "flag2": true,
-                                                                        "flag3": false,
-                                                                        "flag4": false,
-                                                                        "flag5": false,
-                                                                        "flag6": false,
-                                                                        "flag7": false,
-                                                                        "flag8": false,
-                                                                        "flag9": false,
-                                                                        "flag10": false,
-                                                                        "flag11": false,
-                                                                        "flag12": false,
-                                                                        "flag13": false,
-                                                                        "flag14": false,
-                                                                        "flag15": false,
-                                                                        "flag16": false,
-                                                                        "__collapse": false
-                                                                    },
-                                                                    "id": "76e004a1-41f6-4954-a4f8-500c8590ea96"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_ACTOR_START_UPDATE",
-                                                                    "args": {
-                                                                        "actorId": "43c87bc5-aeed-4472-ad48-ff16d327b3b7"
-                                                                    },
-                                                                    "id": "a594e4ca-923b-44b9-aef0-e092fd6d47f3"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_ACTOR_ACTIVATE",
-                                                                    "args": {
-                                                                        "actorId": "befd9a8f-4e47-43a5-9b75-e2c1763c0065"
-                                                                    },
-                                                                    "id": "8622d567-3335-4e2f-941c-743b7c7db813"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_SET_TIMER_SCRIPT",
-                                                                    "args": {
-                                                                        "duration": 0.5,
-                                                                        "frames": 30,
-                                                                        "__scriptTabs": "end"
-                                                                    },
-                                                                    "children": {
-                                                                        "script": [
-                                                                            {
-                                                                                "command": "EVENT_IF_VALUE",
-                                                                                "args": {
-                                                                                    "variable": "14",
-                                                                                    "operator": "==",
-                                                                                    "comparator": 2,
-                                                                                    "__collapseElse": true
-                                                                                },
-                                                                                "children": {
-                                                                                    "true": [
-                                                                                        {
-                                                                                            "command": "EVENT_IF_FALSE",
-                                                                                            "args": {
-                                                                                                "variable": "24",
-                                                                                                "__collapseElse": true,
-                                                                                                "__disableElse": true,
-                                                                                                "__collapse": true
-                                                                                            },
-                                                                                            "children": {
-                                                                                                "true": [
-                                                                                                    {
-                                                                                                        "command": "EVENT_LAUNCH_PROJECTILE",
-                                                                                                        "args": {
-                                                                                                            "spriteSheetId": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
-                                                                                                            "spriteStateId": "",
-                                                                                                            "actorId": "befd9a8f-4e47-43a5-9b75-e2c1763c0065",
-                                                                                                            "x": 0,
-                                                                                                            "y": 0,
-                                                                                                            "otherActorId": "befd9a8f-4e47-43a5-9b75-e2c1763c0065",
-                                                                                                            "direction": "right",
-                                                                                                            "angle": 0,
-                                                                                                            "angleVariable": "L0",
-                                                                                                            "directionType": "actor",
-                                                                                                            "initialOffset": 0,
-                                                                                                            "speed": 2,
-                                                                                                            "animSpeed": 15,
-                                                                                                            "lifeTime": 1,
-                                                                                                            "loopAnim": true,
-                                                                                                            "destroyOnHit": true,
-                                                                                                            "collisionGroup": "3",
-                                                                                                            "collisionMask": [
-                                                                                                                "player"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "id": "ccededc6-8604-4879-9c48-49683636d099"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "command": "EVENT_SOUND_PLAY_EFFECT",
-                                                                                                        "args": {
-                                                                                                            "type": "132a0be5-9490-4577-804f-db8f3ce1e59a",
-                                                                                                            "priority": "low",
-                                                                                                            "pitch": 4,
-                                                                                                            "frequency": 200,
-                                                                                                            "duration": 0.5,
-                                                                                                            "wait": true,
-                                                                                                            "effect": 0
-                                                                                                        },
-                                                                                                        "id": "de75eea6-35cb-44a2-a403-4bec3c12c2e5"
-                                                                                                    }
-                                                                                                ],
-                                                                                                "false": []
-                                                                                            },
-                                                                                            "id": "0e5906ec-17c9-4c56-a4f3-34d5ac280258"
-                                                                                        }
-                                                                                    ],
-                                                                                    "false": []
-                                                                                },
-                                                                                "id": "0f9fd667-9284-4e95-bfca-4fe3200c7e1c"
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    "id": "b9326a22-fa9f-48f4-b417-20962bffafc9"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_ACTOR_MOVE_TO",
-                                                                    "args": {
-                                                                        "actorId": "befd9a8f-4e47-43a5-9b75-e2c1763c0065",
-                                                                        "x": {
-                                                                            "type": "number",
-                                                                            "value": 42
-                                                                        },
-                                                                        "y": {
-                                                                            "type": "number",
-                                                                            "value": 21
-                                                                        },
-                                                                        "moveType": "horizontal",
-                                                                        "useCollisions": false
-                                                                    },
-                                                                    "id": "52ef3467-0a68-4170-b3f6-b54f68aeda8f"
+                                                                    "id": "677f5ebc-e266-4fb9-affd-79a3f6dba690"
                                                                 }
-                                                            ]
-                                                        },
-                                                        "id": "080afd8d-c24f-49de-ba88-55f1e5d11525"
-                                                    }
-                                                ],
-                                                "true1": [
-                                                    {
-                                                        "command": "EVENT_GROUP",
-                                                        "args": {
-                                                            "__label": "Unlock Scrambler",
-                                                            "__collapse": false
-                                                        },
-                                                        "children": {
-                                                            "true": [
+                                                            ],
+                                                            "false": [
                                                                 {
-                                                                    "command": "EVENT_ADD_FLAGS",
+                                                                    "command": "EVENT_GROUP",
                                                                     "args": {
-                                                                        "variable": "21",
-                                                                        "flag1": false,
-                                                                        "flag2": true,
-                                                                        "flag3": false,
-                                                                        "flag4": false,
-                                                                        "flag5": false,
-                                                                        "flag6": false,
-                                                                        "flag7": false,
-                                                                        "flag8": false,
-                                                                        "flag9": false,
-                                                                        "flag10": false,
-                                                                        "flag11": false,
-                                                                        "flag12": false,
-                                                                        "flag13": false,
-                                                                        "flag14": false,
-                                                                        "flag15": false,
-                                                                        "flag16": false
-                                                                    },
-                                                                    "id": "b5feb88a-be2b-4e3c-9af5-5b842ea4da28"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_SET_INPUT_SCRIPT",
-                                                                    "args": {
-                                                                        "input": [
-                                                                            "a"
-                                                                        ],
-                                                                        "override": true,
-                                                                        "__scriptTabs": "press",
-                                                                        "__collapse": false
+                                                                        "__label": "Handle Purchase",
+                                                                        "__collapse": true
                                                                     },
                                                                     "children": {
                                                                         "true": [
                                                                             {
-                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "command": "EVENT_ADD_FLAGS",
                                                                                 "args": {
-                                                                                    "spriteSheetId": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
-                                                                                    "spriteStateId": "",
-                                                                                    "actorId": "$self$",
-                                                                                    "x": 0,
-                                                                                    "y": 0,
-                                                                                    "otherActorId": "$self$",
-                                                                                    "direction": "right",
-                                                                                    "angle": 0,
-                                                                                    "angleVariable": "L0",
-                                                                                    "directionType": "actor",
-                                                                                    "initialOffset": 0,
-                                                                                    "speed": 2,
-                                                                                    "animSpeed": 15,
-                                                                                    "lifeTime": 1,
-                                                                                    "loopAnim": true,
-                                                                                    "destroyOnHit": true,
-                                                                                    "collisionGroup": "3",
-                                                                                    "collisionMask": [
-                                                                                        "2"
-                                                                                    ]
+                                                                                    "variable": "25",
+                                                                                    "flag1": false,
+                                                                                    "flag2": false,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": true,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false,
+                                                                                    "__collapse": true
                                                                                 },
-                                                                                "id": "7a253c34-b349-440c-ae81-4232f0ae08fd"
+                                                                                "id": "50871a1a-42c8-47ff-9719-e377fbadd6cf"
                                                                             },
                                                                             {
-                                                                                "command": "EVENT_SOUND_PLAY_EFFECT",
+                                                                                "command": "EVENT_VARIABLE_MATH",
                                                                                 "args": {
-                                                                                    "type": "c682617a-2ced-47f9-9c63-43f16f981a8f",
-                                                                                    "priority": "medium",
-                                                                                    "pitch": 4,
-                                                                                    "frequency": 200,
-                                                                                    "duration": 0.5,
-                                                                                    "wait": true,
-                                                                                    "effect": 0
+                                                                                    "vectorX": "4",
+                                                                                    "operation": "sub",
+                                                                                    "other": "val",
+                                                                                    "vectorY": "L0",
+                                                                                    "value": 2,
+                                                                                    "minValue": "0",
+                                                                                    "maxValue": "32767",
+                                                                                    "clamp": false,
+                                                                                    "__collapse": true
                                                                                 },
-                                                                                "id": "4dc7b50b-1210-491d-aad5-5433adcd8b58"
+                                                                                "id": "26dfe6db-a8fa-4ffb-bd19-5efef8276653"
                                                                             }
                                                                         ]
                                                                     },
-                                                                    "id": "783760cf-b6ab-4592-aa71-4dd515d5b349"
+                                                                    "id": "41b3bf4f-7e9b-4ea2-8858-d217c3f84396"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "Unlock Ward 2 - 2D",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "Demand Increased &\nCompetitor arrives"
+                                                                                    ],
+                                                                                    "avatarId": "",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "d6955fc9-3a96-4457-8955-ce2c2f6a952c"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "22",
+                                                                                    "flag1": false,
+                                                                                    "flag2": true,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "76e004a1-41f6-4954-a4f8-500c8590ea96"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_START_UPDATE",
+                                                                                "args": {
+                                                                                    "actorId": "43c87bc5-aeed-4472-ad48-ff16d327b3b7",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "a594e4ca-923b-44b9-aef0-e092fd6d47f3"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_ACTIVATE",
+                                                                                "args": {
+                                                                                    "actorId": "befd9a8f-4e47-43a5-9b75-e2c1763c0065",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "8622d567-3335-4e2f-941c-743b7c7db813"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_SET_TIMER_SCRIPT",
+                                                                                "args": {
+                                                                                    "duration": 0.5,
+                                                                                    "frames": 30,
+                                                                                    "__scriptTabs": "end",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "children": {
+                                                                                    "script": [
+                                                                                        {
+                                                                                            "command": "EVENT_IF_VALUE",
+                                                                                            "args": {
+                                                                                                "variable": "14",
+                                                                                                "operator": "==",
+                                                                                                "comparator": 2,
+                                                                                                "__collapseElse": true
+                                                                                            },
+                                                                                            "children": {
+                                                                                                "true": [
+                                                                                                    {
+                                                                                                        "command": "EVENT_IF_FALSE",
+                                                                                                        "args": {
+                                                                                                            "variable": "24",
+                                                                                                            "__collapseElse": true,
+                                                                                                            "__disableElse": true,
+                                                                                                            "__collapse": true
+                                                                                                        },
+                                                                                                        "children": {
+                                                                                                            "true": [
+                                                                                                                {
+                                                                                                                    "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                                                    "args": {
+                                                                                                                        "spriteSheetId": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
+                                                                                                                        "spriteStateId": "",
+                                                                                                                        "actorId": "befd9a8f-4e47-43a5-9b75-e2c1763c0065",
+                                                                                                                        "x": 0,
+                                                                                                                        "y": 0,
+                                                                                                                        "otherActorId": "befd9a8f-4e47-43a5-9b75-e2c1763c0065",
+                                                                                                                        "direction": "right",
+                                                                                                                        "angle": 0,
+                                                                                                                        "angleVariable": "L0",
+                                                                                                                        "directionType": "actor",
+                                                                                                                        "initialOffset": 0,
+                                                                                                                        "speed": 2,
+                                                                                                                        "animSpeed": 15,
+                                                                                                                        "lifeTime": 1,
+                                                                                                                        "loopAnim": true,
+                                                                                                                        "destroyOnHit": true,
+                                                                                                                        "collisionGroup": "3",
+                                                                                                                        "collisionMask": [
+                                                                                                                            "player"
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    "id": "ccededc6-8604-4879-9c48-49683636d099"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                                                                                                                    "args": {
+                                                                                                                        "type": "132a0be5-9490-4577-804f-db8f3ce1e59a",
+                                                                                                                        "priority": "low",
+                                                                                                                        "pitch": 4,
+                                                                                                                        "frequency": 200,
+                                                                                                                        "duration": 0.5,
+                                                                                                                        "wait": true,
+                                                                                                                        "effect": 0
+                                                                                                                    },
+                                                                                                                    "id": "de75eea6-35cb-44a2-a403-4bec3c12c2e5"
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "false": []
+                                                                                                        },
+                                                                                                        "id": "0e5906ec-17c9-4c56-a4f3-34d5ac280258"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "false": []
+                                                                                            },
+                                                                                            "id": "0f9fd667-9284-4e95-bfca-4fe3200c7e1c"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                "id": "b9326a22-fa9f-48f4-b417-20962bffafc9"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_MOVE_TO",
+                                                                                "args": {
+                                                                                    "actorId": "befd9a8f-4e47-43a5-9b75-e2c1763c0065",
+                                                                                    "x": {
+                                                                                        "type": "number",
+                                                                                        "value": 42
+                                                                                    },
+                                                                                    "y": {
+                                                                                        "type": "number",
+                                                                                        "value": 21
+                                                                                    },
+                                                                                    "moveType": "horizontal",
+                                                                                    "useCollisions": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "52ef3467-0a68-4170-b3f6-b54f68aeda8f"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "080afd8d-c24f-49de-ba88-55f1e5d11525"
                                                                 }
                                                             ]
                                                         },
-                                                        "id": "875ac94e-7be7-4aa8-916b-9e2fc8d3b671"
-                                                    },
+                                                        "id": "de930734-0ff4-4aa5-ac50-2cbcc937586f"
+                                                    }
+                                                ],
+                                                "true1": [
                                                     {
-                                                        "command": "EVENT_TEXT",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
                                                         "args": {
-                                                            "text": [
-                                                                "Scrambler Unlocked\nPress A to Shoot"
-                                                            ],
-                                                            "avatarId": ""
+                                                            "variable": "25",
+                                                            "flag": 5,
+                                                            "__collapseElse": true,
+                                                            "__collapse": true
                                                         },
-                                                        "id": "f4ab38fa-7142-4e71-87e8-795cd603896b"
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                                    "args": {
+                                                                        "customEventId": "d2cd72c9-a5fd-4249-9b01-91795d3eca99"
+                                                                    },
+                                                                    "id": "4974014b-6d3d-4d2a-963e-3e2851b82591"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "Handle Purchase",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "25",
+                                                                                    "flag1": false,
+                                                                                    "flag2": false,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": true,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false
+                                                                                },
+                                                                                "id": "c7d44878-5e56-48a0-82f1-e60b609ece47"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                                "args": {
+                                                                                    "vectorX": "4",
+                                                                                    "operation": "sub",
+                                                                                    "other": "val",
+                                                                                    "vectorY": "L0",
+                                                                                    "value": 10,
+                                                                                    "minValue": "0",
+                                                                                    "maxValue": "32767",
+                                                                                    "clamp": false
+                                                                                },
+                                                                                "id": "f6dc4286-1274-48a0-abf4-119aac9686e4"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "f26f81c3-f6c3-4b38-9d67-d89b617fdc70"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "Unlock Scrambler",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "21",
+                                                                                    "flag1": false,
+                                                                                    "flag2": true,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false
+                                                                                },
+                                                                                "id": "b5feb88a-be2b-4e3c-9af5-5b842ea4da28"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_SET_INPUT_SCRIPT",
+                                                                                "args": {
+                                                                                    "input": [
+                                                                                        "a"
+                                                                                    ],
+                                                                                    "override": true,
+                                                                                    "__scriptTabs": "press",
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
+                                                                                                "spriteStateId": "",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": 0,
+                                                                                                "y": 0,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 0,
+                                                                                                "speed": 2,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 1,
+                                                                                                "loopAnim": true,
+                                                                                                "destroyOnHit": true,
+                                                                                                "collisionGroup": "3",
+                                                                                                "collisionMask": [
+                                                                                                    "2"
+                                                                                                ]
+                                                                                            },
+                                                                                            "id": "7a253c34-b349-440c-ae81-4232f0ae08fd"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_SOUND_PLAY_EFFECT",
+                                                                                            "args": {
+                                                                                                "type": "c682617a-2ced-47f9-9c63-43f16f981a8f",
+                                                                                                "priority": "medium",
+                                                                                                "pitch": 4,
+                                                                                                "frequency": 200,
+                                                                                                "duration": 0.5,
+                                                                                                "wait": true,
+                                                                                                "effect": 0
+                                                                                            },
+                                                                                            "id": "4dc7b50b-1210-491d-aad5-5433adcd8b58"
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                "id": "783760cf-b6ab-4592-aa71-4dd515d5b349"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "875ac94e-7be7-4aa8-916b-9e2fc8d3b671"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "Scrambler Unlocked\nPress A to Shoot"
+                                                                        ],
+                                                                        "avatarId": "",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "f4ab38fa-7142-4e71-87e8-795cd603896b"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "954ef243-9e2b-4f9b-9f00-6a8ae2ba8a0d"
                                                     }
                                                 ],
                                                 "true2": [
                                                     {
-                                                        "command": "EVENT_GROUP",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
                                                         "args": {
-                                                            "__label": "Unlock Ward 2 Shop",
+                                                            "variable": "25",
+                                                            "flag": 6,
+                                                            "__collapseElse": false,
                                                             "__collapse": true
                                                         },
                                                         "children": {
                                                             "true": [
                                                                 {
-                                                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                     "args": {
-                                                                        "actorId": "7c83196c-1a4f-46f7-a00e-bd16a239cb10",
-                                                                        "x": {
-                                                                            "type": "number",
-                                                                            "value": 40
-                                                                        },
-                                                                        "y": {
-                                                                            "type": "number",
-                                                                            "value": 27
-                                                                        }
+                                                                        "customEventId": "d2cd72c9-a5fd-4249-9b01-91795d3eca99"
                                                                     },
-                                                                    "id": "0374abe0-48b6-4664-abf8-7b06da479cfe"
+                                                                    "id": "1cd9ecf0-c13d-45a0-83ea-1372901fc537"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "Handle Purchase",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "25",
+                                                                                    "flag1": false,
+                                                                                    "flag2": false,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": true,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false
+                                                                                },
+                                                                                "id": "7995b86f-ed50-4fa2-9ec0-5453ba3d803a"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                                "args": {
+                                                                                    "vectorX": "4",
+                                                                                    "operation": "sub",
+                                                                                    "other": "val",
+                                                                                    "vectorY": "L0",
+                                                                                    "value": 20,
+                                                                                    "minValue": "0",
+                                                                                    "maxValue": "32767",
+                                                                                    "clamp": false
+                                                                                },
+                                                                                "id": "40349e9d-5641-4938-a06d-70b59d2c3b82"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "b4d3b790-1960-4db0-be11-227b8ed81283"
                                                                 },
                                                                 {
-                                                                    "command": "EVENT_ACTOR_ACTIVATE",
+                                                                    "command": "EVENT_GROUP",
                                                                     "args": {
-                                                                        "actorId": "7c83196c-1a4f-46f7-a00e-bd16a239cb10"
+                                                                        "__label": "Unlock Ward 2 Shop",
+                                                                        "__collapse": true
                                                                     },
-                                                                    "id": "becd263e-dc8a-41b6-8808-03d1c86ec86e"
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_SET_POSITION",
+                                                                                "args": {
+                                                                                    "actorId": "7c83196c-1a4f-46f7-a00e-bd16a239cb10",
+                                                                                    "x": {
+                                                                                        "type": "number",
+                                                                                        "value": 40
+                                                                                    },
+                                                                                    "y": {
+                                                                                        "type": "number",
+                                                                                        "value": 27
+                                                                                    }
+                                                                                },
+                                                                                "id": "0374abe0-48b6-4664-abf8-7b06da479cfe"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_ACTIVATE",
+                                                                                "args": {
+                                                                                    "actorId": "7c83196c-1a4f-46f7-a00e-bd16a239cb10"
+                                                                                },
+                                                                                "id": "becd263e-dc8a-41b6-8808-03d1c86ec86e"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "a2cfd65f-4e0a-4fde-ba88-cb9030c9777b"
                                                                 }
                                                             ]
                                                         },
-                                                        "id": "a2cfd65f-4e0a-4fde-ba88-cb9030c9777b"
+                                                        "id": "442227fd-6db7-413a-b9c1-f9e1752c4f6d"
                                                     }
                                                 ],
                                                 "true3": [
                                                     {
-                                                        "command": "EVENT_GROUP",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
                                                         "args": {
-                                                            "__label": "Unlock Ward 3 & Ward 3 - 1D",
+                                                            "variable": "25",
+                                                            "flag": 7,
+                                                            "__collapseElse": false,
                                                             "__collapse": true
                                                         },
                                                         "children": {
                                                             "true": [
                                                                 {
-                                                                    "command": "EVENT_ADD_FLAGS",
+                                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                     "args": {
-                                                                        "variable": "13",
-                                                                        "flag1": false,
-                                                                        "flag2": false,
-                                                                        "flag3": false,
-                                                                        "flag4": false,
-                                                                        "flag5": true,
-                                                                        "flag6": false,
-                                                                        "flag7": false,
-                                                                        "flag8": false,
-                                                                        "flag9": false,
-                                                                        "flag10": false,
-                                                                        "flag11": false,
-                                                                        "flag12": false,
-                                                                        "flag13": false,
-                                                                        "flag14": false,
-                                                                        "flag15": false,
-                                                                        "flag16": false,
+                                                                        "customEventId": "d2cd72c9-a5fd-4249-9b01-91795d3eca99"
+                                                                    },
+                                                                    "id": "30b613f3-7243-4fca-a592-cff2fe620e64"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "Handle Purchase",
                                                                         "__collapse": true
                                                                     },
-                                                                    "id": "bf7dd437-4c43-43ff-9fba-c0b6a1f7c061"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_ACTOR_START_UPDATE",
-                                                                    "args": {
-                                                                        "actorId": "5d01018a-b2b8-4f3f-9771-f1f234a6bc80",
-                                                                        "__collapse": false
-                                                                    },
-                                                                    "id": "52f71fa5-2b0c-47ee-bae4-d327e8242f84"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_ACTOR_START_UPDATE",
-                                                                    "args": {
-                                                                        "actorId": "12aeb91a-c12d-489f-9d38-37e886caf4d8",
-                                                                        "__collapse": false
-                                                                    },
-                                                                    "id": "57b80012-a384-42c9-8417-1be92dad3034"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_PALETTE_SET_BACKGROUND",
-                                                                    "args": {
-                                                                        "palette0": "keep",
-                                                                        "palette1": "keep",
-                                                                        "palette2": "default-bg-3",
-                                                                        "palette3": "keep",
-                                                                        "palette4": "keep",
-                                                                        "palette5": "keep",
-                                                                        "palette6": "keep",
-                                                                        "palette7": "keep"
-                                                                    },
-                                                                    "id": "901c18e4-f54e-4caa-8b7f-02e27d31bd12"
-                                                                },
-                                                                {
-                                                                    "command": "EVENT_REMOVE_INPUT_SCRIPT",
-                                                                    "args": {
-                                                                        "input": [
-                                                                            "right"
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "25",
+                                                                                    "flag1": false,
+                                                                                    "flag2": false,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": true,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false
+                                                                                },
+                                                                                "id": "3c572504-f8ab-44fd-bc38-12f85fe9b88d"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                                "args": {
+                                                                                    "vectorX": "4",
+                                                                                    "operation": "sub",
+                                                                                    "other": "val",
+                                                                                    "vectorY": "L0",
+                                                                                    "value": 100,
+                                                                                    "minValue": "0",
+                                                                                    "maxValue": "32767",
+                                                                                    "clamp": false
+                                                                                },
+                                                                                "id": "c390395c-6e14-4899-acc6-e87f1060a5a5"
+                                                                            }
                                                                         ]
                                                                     },
-                                                                    "id": "982476bd-fd8e-4f22-a915-0170db26d135"
+                                                                    "id": "f72c193c-770c-445d-851d-51b3981adcea"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "Unlock Ward 3 & Ward 3 - 1D",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "13",
+                                                                                    "flag1": false,
+                                                                                    "flag2": false,
+                                                                                    "flag3": false,
+                                                                                    "flag4": false,
+                                                                                    "flag5": true,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "bf7dd437-4c43-43ff-9fba-c0b6a1f7c061"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_START_UPDATE",
+                                                                                "args": {
+                                                                                    "actorId": "5d01018a-b2b8-4f3f-9771-f1f234a6bc80",
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "id": "52f71fa5-2b0c-47ee-bae4-d327e8242f84"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_START_UPDATE",
+                                                                                "args": {
+                                                                                    "actorId": "12aeb91a-c12d-489f-9d38-37e886caf4d8",
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "id": "57b80012-a384-42c9-8417-1be92dad3034"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_PALETTE_SET_BACKGROUND",
+                                                                                "args": {
+                                                                                    "palette0": "keep",
+                                                                                    "palette1": "keep",
+                                                                                    "palette2": "default-bg-3",
+                                                                                    "palette3": "keep",
+                                                                                    "palette4": "keep",
+                                                                                    "palette5": "keep",
+                                                                                    "palette6": "keep",
+                                                                                    "palette7": "keep"
+                                                                                },
+                                                                                "id": "901c18e4-f54e-4caa-8b7f-02e27d31bd12"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_REMOVE_INPUT_SCRIPT",
+                                                                                "args": {
+                                                                                    "input": [
+                                                                                        "right"
+                                                                                    ]
+                                                                                },
+                                                                                "id": "982476bd-fd8e-4f22-a915-0170db26d135"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "6bb563cf-bbe7-4045-b258-67923d72abbc"
                                                                 }
                                                             ]
                                                         },
-                                                        "id": "6bb563cf-bbe7-4045-b258-67923d72abbc"
+                                                        "id": "496030a6-cc4c-4831-a0e1-0490980fb9b6"
                                                     }
                                                 ],
                                                 "true4": [],
@@ -24173,8 +24469,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": "selected",
-        "worldScrollX": 110,
-        "worldScrollY": 106,
+        "worldScrollX": 53,
+        "worldScrollY": 53,
         "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
