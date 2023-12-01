@@ -7257,32 +7257,47 @@
                     "startScript": [],
                     "updateScript": [
                         {
-                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "command": "EVENT_IF_VALUE",
                             "args": {
-                                "customEventId": "21454b0d-2428-4efe-94e8-8b76734ea6da"
+                                "variable": "14",
+                                "operator": "==",
+                                "comparator": "0",
+                                "__collapseElse": true
                             },
-                            "id": "c7a95d87-5380-4413-a1da-d6abd7f25946"
-                        },
-                        {
-                            "command": "EVENT_ACTOR_SET_POSITION",
-                            "args": {
-                                "actorId": "$self$",
-                                "x": {
-                                    "type": "variable",
-                                    "value": "5"
-                                },
-                                "y": {
-                                    "type": "variable",
-                                    "value": "6"
-                                },
-                                "__comment": false
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "21454b0d-2428-4efe-94e8-8b76734ea6da"
+                                        },
+                                        "id": "c7a95d87-5380-4413-a1da-d6abd7f25946"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_SET_POSITION",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "x": {
+                                                "type": "variable",
+                                                "value": "5"
+                                            },
+                                            "y": {
+                                                "type": "variable",
+                                                "value": "6"
+                                            },
+                                            "__comment": false
+                                        },
+                                        "id": "e72e598c-c59c-443e-8240-9a093c399ad7"
+                                    },
+                                    {
+                                        "command": "EVENT_STOP",
+                                        "args": {},
+                                        "id": "d7e9de87-51ff-4040-8139-5cdd5d41ca3d"
+                                    }
+                                ],
+                                "false": []
                             },
-                            "id": "e72e598c-c59c-443e-8240-9a093c399ad7"
-                        },
-                        {
-                            "command": "EVENT_STOP",
-                            "args": {},
-                            "id": "d7e9de87-51ff-4040-8139-5cdd5d41ca3d"
+                            "id": "7b829cd3-6177-4ebf-90bf-5f6a18fc7e73"
                         }
                     ],
                     "hit1Script": [],
@@ -7360,46 +7375,61 @@
                     "startScript": [],
                     "updateScript": [
                         {
-                            "command": "EVENT_IF_FLAGS_COMPARE",
+                            "command": "EVENT_IF_VALUE",
                             "args": {
-                                "variable": "13",
-                                "flag": 0,
+                                "variable": "14",
+                                "operator": "==",
+                                "comparator": "0",
                                 "__collapseElse": true
                             },
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "command": "EVENT_IF_FLAGS_COMPARE",
                                         "args": {
-                                            "customEventId": "21454b0d-2428-4efe-94e8-8b76734ea6da"
+                                            "variable": "13",
+                                            "flag": 0,
+                                            "__collapseElse": true
                                         },
-                                        "id": "c054e0be-e5ee-4ee0-927a-f130da919ecb"
-                                    },
-                                    {
-                                        "command": "EVENT_ACTOR_SET_POSITION",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "x": {
-                                                "type": "variable",
-                                                "value": "5"
-                                            },
-                                            "y": {
-                                                "type": "variable",
-                                                "value": "6"
-                                            },
-                                            "__comment": false
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                    "args": {
+                                                        "customEventId": "21454b0d-2428-4efe-94e8-8b76734ea6da"
+                                                    },
+                                                    "id": "c054e0be-e5ee-4ee0-927a-f130da919ecb"
+                                                },
+                                                {
+                                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                                    "args": {
+                                                        "actorId": "$self$",
+                                                        "x": {
+                                                            "type": "variable",
+                                                            "value": "5"
+                                                        },
+                                                        "y": {
+                                                            "type": "variable",
+                                                            "value": "6"
+                                                        },
+                                                        "__comment": false
+                                                    },
+                                                    "id": "dd330a12-9d33-48da-aa77-0c9446aae353"
+                                                },
+                                                {
+                                                    "command": "EVENT_STOP",
+                                                    "args": {},
+                                                    "id": "7e6b8f80-d5c8-44b9-b499-e41389bc4daa"
+                                                }
+                                            ],
+                                            "false": []
                                         },
-                                        "id": "dd330a12-9d33-48da-aa77-0c9446aae353"
+                                        "id": "f9179cee-d6b9-4c4b-9c26-d46437d2ad2f"
                                     }
                                 ],
                                 "false": []
                             },
-                            "id": "f9179cee-d6b9-4c4b-9c26-d46437d2ad2f"
-                        },
-                        {
-                            "command": "EVENT_STOP",
-                            "args": {},
-                            "id": "7e6b8f80-d5c8-44b9-b499-e41389bc4daa"
+                            "id": "9f371e7d-71e8-4601-98d2-5d1114e0a20e"
                         }
                     ],
                     "hit1Script": [],
@@ -7419,7 +7449,7 @@
                     "animSpeed": 15,
                     "paletteId": "",
                     "isPinned": false,
-                    "persistent": true,
+                    "persistent": false,
                     "collisionGroup": "1",
                     "symbol": "actor_1",
                     "script": [
@@ -7504,7 +7534,7 @@
                     "animSpeed": 15,
                     "paletteId": "",
                     "isPinned": false,
-                    "persistent": true,
+                    "persistent": false,
                     "collisionGroup": "1",
                     "symbol": "actor_2",
                     "script": [
@@ -7629,10 +7659,639 @@
                     ],
                     "updateScript": [
                         {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "14",
+                                "operator": "==",
+                                "comparator": "0",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_IF_FLAGS_COMPARE",
+                                        "args": {
+                                            "variable": "13",
+                                            "flag": 0,
+                                            "__collapseElse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_ACTOR_GET_POSITION",
+                                                    "args": {
+                                                        "actorId": "$self$",
+                                                        "vectorX": "T0",
+                                                        "vectorY": "T1",
+                                                        "__collapse": true
+                                                    },
+                                                    "id": "b5d53a3f-2fc5-45e1-a315-b05f4c64375c"
+                                                },
+                                                {
+                                                    "command": "EVENT_IF_EXPRESSION",
+                                                    "args": {
+                                                        "expression": "($T0$ == $L1$) && \n($T1$ == $L2$)",
+                                                        "__collapseElse": false,
+                                                        "__collapse": true
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "command": "EVENT_IF_FLAGS_COMPARE",
+                                                                "args": {
+                                                                    "variable": "L3",
+                                                                    "flag": 0,
+                                                                    "__collapseElse": false,
+                                                                    "__collapse": false,
+                                                                    "__comment": false
+                                                                },
+                                                                "children": {
+                                                                    "true": [
+                                                                        {
+                                                                            "command": "EVENT_CLEAR_FLAGS",
+                                                                            "args": {
+                                                                                "variable": "L3",
+                                                                                "flag1": true,
+                                                                                "flag2": false,
+                                                                                "flag3": false,
+                                                                                "flag4": false,
+                                                                                "flag5": false,
+                                                                                "flag6": false,
+                                                                                "flag7": false,
+                                                                                "flag8": false,
+                                                                                "flag9": false,
+                                                                                "flag10": false,
+                                                                                "flag11": false,
+                                                                                "flag12": false,
+                                                                                "flag13": false,
+                                                                                "flag14": false,
+                                                                                "flag15": false,
+                                                                                "flag16": false,
+                                                                                "__collapse": true
+                                                                            },
+                                                                            "id": "bac1c69b-ad59-44dd-8564-12a53f41e486"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                                            "args": {
+                                                                                "customEventId": "46c44a17-20d0-4d6a-8ccd-870f6c910d88",
+                                                                                "$actor[0]$": "ff5ec89d-a4a4-4158-901d-d8a5caf701c3",
+                                                                                "__collapse": false
+                                                                            },
+                                                                            "id": "bc82bcac-8ac4-4770-a2d9-d459c0a5afad"
+                                                                        },
+                                                                        {
+                                                                            "command": "EVENT_WAIT",
+                                                                            "args": {
+                                                                                "time": 0.5,
+                                                                                "frames": 30,
+                                                                                "__collapse": true
+                                                                            },
+                                                                            "id": "49326d5c-5414-4bf4-9a7a-b2a21d8d8859"
+                                                                        }
+                                                                    ],
+                                                                    "false": [
+                                                                        {
+                                                                            "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
+                                                                            "args": {
+                                                                                "actorId": "ff5ec89d-a4a4-4158-901d-d8a5caf701c3",
+                                                                                "operator": "<=",
+                                                                                "distance": {
+                                                                                    "type": "number",
+                                                                                    "value": 8
+                                                                                },
+                                                                                "otherActorId": "$self$",
+                                                                                "__collapseElse": false,
+                                                                                "__collapse": false
+                                                                            },
+                                                                            "children": {
+                                                                                "true": [
+                                                                                    {
+                                                                                        "command": "EVENT_ACTOR_GET_POSITION",
+                                                                                        "args": {
+                                                                                            "actorId": "ff5ec89d-a4a4-4158-901d-d8a5caf701c3",
+                                                                                            "vectorX": "L1",
+                                                                                            "vectorY": "L2"
+                                                                                        },
+                                                                                        "id": "28ba119b-5698-4bc9-b6e1-ca1cb032ec6e"
+                                                                                    },
+                                                                                    {
+                                                                                        "command": "EVENT_SET_FLAGS",
+                                                                                        "args": {
+                                                                                            "variable": "L3",
+                                                                                            "flag1": true,
+                                                                                            "flag2": false,
+                                                                                            "flag3": false,
+                                                                                            "flag4": false,
+                                                                                            "flag5": false,
+                                                                                            "flag6": false,
+                                                                                            "flag7": false,
+                                                                                            "flag8": false,
+                                                                                            "flag9": false,
+                                                                                            "flag10": false,
+                                                                                            "flag11": false,
+                                                                                            "flag12": false,
+                                                                                            "flag13": false,
+                                                                                            "flag14": false,
+                                                                                            "flag15": false,
+                                                                                            "flag16": false,
+                                                                                            "__collapse": true
+                                                                                        },
+                                                                                        "id": "59fc6f1e-a05b-4aae-8374-37fee86af494"
+                                                                                    }
+                                                                                ],
+                                                                                "false": [
+                                                                                    {
+                                                                                        "command": "EVENT_VARIABLE_MATH",
+                                                                                        "args": {
+                                                                                            "vectorX": "L0",
+                                                                                            "operation": "set",
+                                                                                            "other": "rnd",
+                                                                                            "vectorY": "L0",
+                                                                                            "value": "0",
+                                                                                            "minValue": 1,
+                                                                                            "maxValue": 8,
+                                                                                            "clamp": false,
+                                                                                            "__collapse": true,
+                                                                                            "__comment": true
+                                                                                        },
+                                                                                        "id": "2640d9e2-7dec-49d1-a4ee-7abbf4b87f2d"
+                                                                                    },
+                                                                                    {
+                                                                                        "command": "EVENT_GROUP",
+                                                                                        "args": {},
+                                                                                        "children": {
+                                                                                            "true": [
+                                                                                                {
+                                                                                                    "command": "EVENT_WAIT",
+                                                                                                    "args": {
+                                                                                                        "time": 0.5,
+                                                                                                        "frames": 30,
+                                                                                                        "__collapse": true,
+                                                                                                        "__comment": true
+                                                                                                    },
+                                                                                                    "id": "cf084b7b-87d3-41c8-9a50-baf10eb579e8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                                                                                    "args": {
+                                                                                                        "variable": "L0",
+                                                                                                        "expression": "($L0$ + 1) % 8",
+                                                                                                        "__collapse": true
+                                                                                                    },
+                                                                                                    "id": "c29b4d66-a6e4-4fce-b5cf-ccce21effa73"
+                                                                                                },
+                                                                                                {
+                                                                                                    "command": "EVENT_SWITCH",
+                                                                                                    "args": {
+                                                                                                        "variable": "L0",
+                                                                                                        "choices": 8,
+                                                                                                        "__collapseCase0": false,
+                                                                                                        "value0": 0,
+                                                                                                        "__collapseCase1": false,
+                                                                                                        "value1": 1,
+                                                                                                        "__collapseCase2": false,
+                                                                                                        "value2": 2,
+                                                                                                        "__collapseCase3": false,
+                                                                                                        "value3": 3,
+                                                                                                        "__collapseCase4": false,
+                                                                                                        "value4": 4,
+                                                                                                        "__collapseCase5": false,
+                                                                                                        "value5": 5,
+                                                                                                        "__collapseCase6": false,
+                                                                                                        "value6": 6,
+                                                                                                        "__collapseCase7": false,
+                                                                                                        "value7": 7,
+                                                                                                        "__collapseCase8": false,
+                                                                                                        "value8": 9,
+                                                                                                        "__collapseCase9": false,
+                                                                                                        "value9": 10,
+                                                                                                        "__collapseCase10": false,
+                                                                                                        "value10": 11,
+                                                                                                        "__collapseCase11": false,
+                                                                                                        "value11": 12,
+                                                                                                        "__collapseCase12": false,
+                                                                                                        "value12": 13,
+                                                                                                        "__collapseCase13": false,
+                                                                                                        "value13": 14,
+                                                                                                        "__collapseCase14": false,
+                                                                                                        "value14": 15,
+                                                                                                        "__collapseCase15": false,
+                                                                                                        "value15": 16,
+                                                                                                        "__collapseElse": true,
+                                                                                                        "__collapse": true,
+                                                                                                        "__label": "Set Des Pos"
+                                                                                                    },
+                                                                                                    "children": {
+                                                                                                        "true0": [
+                                                                                                            {
+                                                                                                                "command": "EVENT_GROUP",
+                                                                                                                "args": {
+                                                                                                                    "__label": "Set DesPos",
+                                                                                                                    "__collapse": true
+                                                                                                                },
+                                                                                                                "children": {
+                                                                                                                    "true": [
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L1",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 22
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "990258ba-254e-4589-ab21-2e236b067def"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L2",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 21
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "23af5ed0-adf3-49de-aeec-83f0060a7fee"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                "id": "41fe9dd9-5826-445d-93f0-1e17cb4144b8"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "true1": [
+                                                                                                            {
+                                                                                                                "command": "EVENT_GROUP",
+                                                                                                                "args": {
+                                                                                                                    "__label": "Set DesPos",
+                                                                                                                    "__collapse": true
+                                                                                                                },
+                                                                                                                "children": {
+                                                                                                                    "true": [
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L1",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 26
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "ca1c7276-aeaf-4a93-84e9-2f1a96e145bf"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L2",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 21
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "edb67f00-5086-4a49-b5c3-f1e1a6ba3660"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                "id": "ce3bca1e-db6e-40bb-8ea1-2a903fa1196e"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "true2": [
+                                                                                                            {
+                                                                                                                "command": "EVENT_GROUP",
+                                                                                                                "args": {
+                                                                                                                    "__label": "Set DesPos",
+                                                                                                                    "__collapse": true
+                                                                                                                },
+                                                                                                                "children": {
+                                                                                                                    "true": [
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L1",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 32
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "05c6e0e0-6fa3-4659-a7a6-277fee11535e"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L2",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 21
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "3a9bffaa-e19d-4806-bb27-a0291d6b4735"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                "id": "117a663f-86f5-4eb7-b6d1-76482da5fbea"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "true3": [
+                                                                                                            {
+                                                                                                                "command": "EVENT_GROUP",
+                                                                                                                "args": {
+                                                                                                                    "__label": "Set DesPos",
+                                                                                                                    "__collapse": true
+                                                                                                                },
+                                                                                                                "children": {
+                                                                                                                    "true": [
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L1",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 36
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "39adecd4-b0f9-4c2f-944f-9fd0119cda3a"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L2",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 21
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "29375a3b-dd2e-4991-b698-0c598310ef75"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                "id": "324fe984-a0ce-45d3-9a06-bd8c4dcfb90c"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "true4": [
+                                                                                                            {
+                                                                                                                "command": "EVENT_GROUP",
+                                                                                                                "args": {
+                                                                                                                    "__label": "Set DesPos",
+                                                                                                                    "__collapse": true
+                                                                                                                },
+                                                                                                                "children": {
+                                                                                                                    "true": [
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L1",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 36
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "b3ab4fd7-a136-42f8-83d6-d7c06f6c49b3"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L2",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 33
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "005b4b1c-6c97-49b0-977e-2a1d23a84cce"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                "id": "b61b767f-2c90-4e4a-b4dc-a484b7637230"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "true5": [
+                                                                                                            {
+                                                                                                                "command": "EVENT_GROUP",
+                                                                                                                "args": {
+                                                                                                                    "__label": "Set DesPos",
+                                                                                                                    "__collapse": true
+                                                                                                                },
+                                                                                                                "children": {
+                                                                                                                    "true": [
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L1",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 32
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "211e19f1-d3f0-4545-b440-eb837397658e"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L2",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 33
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "ba9aaee1-ce96-4a0f-953e-39bbe9084342"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                "id": "dd1d1a2f-64d0-4552-ac78-a50524458cd3"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "true6": [
+                                                                                                            {
+                                                                                                                "command": "EVENT_GROUP",
+                                                                                                                "args": {
+                                                                                                                    "__label": "Set DesPos",
+                                                                                                                    "__collapse": true
+                                                                                                                },
+                                                                                                                "children": {
+                                                                                                                    "true": [
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L1",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 26
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "15a9dace-29f4-4540-97d0-0f06aaf120e1"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L2",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 33
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "ea1f1b8e-0fdc-4019-9331-68d9f227caab"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                "id": "162ab20c-72ad-4e22-ae6d-4f51e7884b18"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "true7": [
+                                                                                                            {
+                                                                                                                "command": "EVENT_GROUP",
+                                                                                                                "args": {
+                                                                                                                    "__label": "Set DesPos",
+                                                                                                                    "__collapse": false
+                                                                                                                },
+                                                                                                                "children": {
+                                                                                                                    "true": [
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L1",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 22
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "63a54e95-8a49-42ac-8e11-862fb064be8a"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "command": "EVENT_SET_VALUE",
+                                                                                                                            "args": {
+                                                                                                                                "variable": "L2",
+                                                                                                                                "value": {
+                                                                                                                                    "type": "number",
+                                                                                                                                    "value": 33
+                                                                                                                                }
+                                                                                                                            },
+                                                                                                                            "id": "21d48455-8449-47a9-b4c4-83df002ea65f"
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                "id": "d57d6923-1c95-4341-963d-185e06fba771"
+                                                                                                            }
+                                                                                                        ],
+                                                                                                        "true8": [],
+                                                                                                        "true9": [],
+                                                                                                        "true10": [],
+                                                                                                        "true11": [],
+                                                                                                        "true12": [],
+                                                                                                        "true13": [],
+                                                                                                        "true14": [],
+                                                                                                        "true15": [],
+                                                                                                        "false": []
+                                                                                                    },
+                                                                                                    "id": "9fcdee4b-6550-404d-af9c-134d52ce58f5"
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        "id": "c9cdc059-5c6c-4aed-8d74-22e254f440d9"
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            "id": "59aef95d-1615-4e8e-ae34-2be5665f74ea"
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "id": "e19ca240-100e-4e95-800d-4d47f3aa2e41"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "command": "EVENT_ACTOR_MOVE_TO",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "x": {
+                                                                        "type": "variable",
+                                                                        "value": "L1"
+                                                                    },
+                                                                    "y": {
+                                                                        "type": "variable",
+                                                                        "value": "L2"
+                                                                    },
+                                                                    "moveType": "horizontal",
+                                                                    "useCollisions": false,
+                                                                    "__collapse": false
+                                                                },
+                                                                "id": "ca932df6-c476-4669-893e-8c3b80afb43a"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "id": "52f6c751-5274-4bad-942c-2aa23292d6bd"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "574c9c19-caa9-47b4-937f-622ae1cddb4a"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "335b5a0b-033c-45cf-b506-644a7b509770"
+                        }
+                    ],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "d2670703-8770-4664-9124-0614955ea634",
+                    "x": 3,
+                    "y": 7
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "a11f16c9-0b1d-4ac3-b8c7-5c7f6d77d7c9",
+                    "direction": "down",
+                    "moveSpeed": 0.5,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_4",
+                    "script": [],
+                    "startScript": [
+                        {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "L0",
+                                "value": {
+                                    "type": "number",
+                                    "value": 1
+                                }
+                            },
+                            "id": "aa91323d-cae5-41f2-a042-a3cb31cd1583"
+                        },
+                        {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "L1",
+                                "value": {
+                                    "type": "number",
+                                    "value": 42
+                                }
+                            },
+                            "id": "29c64355-ae3e-4155-997b-5d8c2adfdd71"
+                        },
+                        {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "L2",
+                                "value": {
+                                    "type": "number",
+                                    "value": 21
+                                }
+                            },
+                            "id": "43845502-a574-4673-bff7-10edc5d6f4d6"
+                        }
+                    ],
+                    "updateScript": [
+                        {
                             "command": "EVENT_IF_FLAGS_COMPARE",
                             "args": {
                                 "variable": "13",
-                                "flag": 0,
+                                "flag": 2,
                                 "__collapseElse": true
                             },
                             "children": {
@@ -7645,7 +8304,7 @@
                                             "vectorY": "T1",
                                             "__collapse": true
                                         },
-                                        "id": "b5d53a3f-2fc5-45e1-a315-b05f4c64375c"
+                                        "id": "389a5ac6-29c8-4e30-9563-6bc703424991"
                                     },
                                     {
                                         "command": "EVENT_IF_EXPRESSION",
@@ -7689,16 +8348,16 @@
                                                                     "flag16": false,
                                                                     "__collapse": true
                                                                 },
-                                                                "id": "bac1c69b-ad59-44dd-8564-12a53f41e486"
+                                                                "id": "32391f7f-eb41-4b38-a3e8-b1bd372d30f8"
                                                             },
                                                             {
                                                                 "command": "EVENT_CALL_CUSTOM_EVENT",
                                                                 "args": {
                                                                     "customEventId": "46c44a17-20d0-4d6a-8ccd-870f6c910d88",
-                                                                    "$actor[0]$": "ff5ec89d-a4a4-4158-901d-d8a5caf701c3",
+                                                                    "$actor[0]$": "62f48ddc-e169-4b63-87d1-49c5ec63b0f5",
                                                                     "__collapse": false
                                                                 },
-                                                                "id": "bc82bcac-8ac4-4770-a2d9-d459c0a5afad"
+                                                                "id": "956775fa-fbaa-4793-a3ff-2b7b34f7c34a"
                                                             },
                                                             {
                                                                 "command": "EVENT_WAIT",
@@ -7707,14 +8366,14 @@
                                                                     "frames": 30,
                                                                     "__collapse": true
                                                                 },
-                                                                "id": "49326d5c-5414-4bf4-9a7a-b2a21d8d8859"
+                                                                "id": "05ecb7cc-9a40-4e7f-a87d-fdfa9616fb94"
                                                             }
                                                         ],
                                                         "false": [
                                                             {
                                                                 "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
                                                                 "args": {
-                                                                    "actorId": "ff5ec89d-a4a4-4158-901d-d8a5caf701c3",
+                                                                    "actorId": "62f48ddc-e169-4b63-87d1-49c5ec63b0f5",
                                                                     "operator": "<=",
                                                                     "distance": {
                                                                         "type": "number",
@@ -7733,7 +8392,7 @@
                                                                                 "vectorX": "L1",
                                                                                 "vectorY": "L2"
                                                                             },
-                                                                            "id": "28ba119b-5698-4bc9-b6e1-ca1cb032ec6e"
+                                                                            "id": "173067cb-23af-4fe2-bcf2-1ef71b44e430"
                                                                         },
                                                                         {
                                                                             "command": "EVENT_SET_FLAGS",
@@ -7757,7 +8416,7 @@
                                                                                 "flag16": false,
                                                                                 "__collapse": true
                                                                             },
-                                                                            "id": "59fc6f1e-a05b-4aae-8374-37fee86af494"
+                                                                            "id": "5196850a-a5dd-434c-8e80-2417dcd6e05f"
                                                                         }
                                                                     ],
                                                                     "false": [
@@ -7775,7 +8434,7 @@
                                                                                 "__collapse": true,
                                                                                 "__comment": true
                                                                             },
-                                                                            "id": "2640d9e2-7dec-49d1-a4ee-7abbf4b87f2d"
+                                                                            "id": "20a387d6-e99e-4dbe-932f-1e9fe7bf3ad1"
                                                                         },
                                                                         {
                                                                             "command": "EVENT_GROUP",
@@ -7790,7 +8449,7 @@
                                                                                             "__collapse": true,
                                                                                             "__comment": true
                                                                                         },
-                                                                                        "id": "cf084b7b-87d3-41c8-9a50-baf10eb579e8"
+                                                                                        "id": "cc74a97b-f676-43d9-9574-a8a333e4e009"
                                                                                     },
                                                                                     {
                                                                                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
@@ -7799,7 +8458,7 @@
                                                                                             "expression": "($L0$ + 1) % 8",
                                                                                             "__collapse": true
                                                                                         },
-                                                                                        "id": "c29b4d66-a6e4-4fce-b5cf-ccce21effa73"
+                                                                                        "id": "3ce5cacc-bc8d-4943-8758-956f705ae8c4"
                                                                                     },
                                                                                     {
                                                                                         "command": "EVENT_SWITCH",
@@ -7839,7 +8498,7 @@
                                                                                             "__collapseCase15": false,
                                                                                             "value15": 16,
                                                                                             "__collapseElse": true,
-                                                                                            "__collapse": true,
+                                                                                            "__collapse": false,
                                                                                             "__label": "Set Des Pos"
                                                                                         },
                                                                                         "children": {
@@ -7848,7 +8507,7 @@
                                                                                                     "command": "EVENT_GROUP",
                                                                                                     "args": {
                                                                                                         "__label": "Set DesPos",
-                                                                                                        "__collapse": true
+                                                                                                        "__collapse": false
                                                                                                     },
                                                                                                     "children": {
                                                                                                         "true": [
@@ -7858,10 +8517,10 @@
                                                                                                                     "variable": "L1",
                                                                                                                     "value": {
                                                                                                                         "type": "number",
-                                                                                                                        "value": 22
+                                                                                                                        "value": 42
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "990258ba-254e-4589-ab21-2e236b067def"
+                                                                                                                "id": "6a9ef3dd-ab27-46b1-8001-8600db6d8967"
                                                                                                             },
                                                                                                             {
                                                                                                                 "command": "EVENT_SET_VALUE",
@@ -7872,11 +8531,11 @@
                                                                                                                         "value": 21
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "23af5ed0-adf3-49de-aeec-83f0060a7fee"
+                                                                                                                "id": "0bc03e48-500b-46d9-9c9e-f6c327b39ca8"
                                                                                                             }
                                                                                                         ]
                                                                                                     },
-                                                                                                    "id": "41fe9dd9-5826-445d-93f0-1e17cb4144b8"
+                                                                                                    "id": "b52f6f99-a3e2-4c39-8df2-0aea13221682"
                                                                                                 }
                                                                                             ],
                                                                                             "true1": [
@@ -7884,7 +8543,7 @@
                                                                                                     "command": "EVENT_GROUP",
                                                                                                     "args": {
                                                                                                         "__label": "Set DesPos",
-                                                                                                        "__collapse": true
+                                                                                                        "__collapse": false
                                                                                                     },
                                                                                                     "children": {
                                                                                                         "true": [
@@ -7894,10 +8553,10 @@
                                                                                                                     "variable": "L1",
                                                                                                                     "value": {
                                                                                                                         "type": "number",
-                                                                                                                        "value": 26
+                                                                                                                        "value": 46
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "ca1c7276-aeaf-4a93-84e9-2f1a96e145bf"
+                                                                                                                "id": "853c1f88-d1c7-4b8f-87d2-e136df2a6c8a"
                                                                                                             },
                                                                                                             {
                                                                                                                 "command": "EVENT_SET_VALUE",
@@ -7908,11 +8567,11 @@
                                                                                                                         "value": 21
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "edb67f00-5086-4a49-b5c3-f1e1a6ba3660"
+                                                                                                                "id": "285852b3-e817-4e69-9cb5-67b3fadad74b"
                                                                                                             }
                                                                                                         ]
                                                                                                     },
-                                                                                                    "id": "ce3bca1e-db6e-40bb-8ea1-2a903fa1196e"
+                                                                                                    "id": "1d5b7d2a-1991-48ed-88c0-2a46c49619e8"
                                                                                                 }
                                                                                             ],
                                                                                             "true2": [
@@ -7920,7 +8579,7 @@
                                                                                                     "command": "EVENT_GROUP",
                                                                                                     "args": {
                                                                                                         "__label": "Set DesPos",
-                                                                                                        "__collapse": true
+                                                                                                        "__collapse": false
                                                                                                     },
                                                                                                     "children": {
                                                                                                         "true": [
@@ -7930,10 +8589,10 @@
                                                                                                                     "variable": "L1",
                                                                                                                     "value": {
                                                                                                                         "type": "number",
-                                                                                                                        "value": 32
+                                                                                                                        "value": 52
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "05c6e0e0-6fa3-4659-a7a6-277fee11535e"
+                                                                                                                "id": "6b2146c8-e375-4a59-978d-4f28ad45c99f"
                                                                                                             },
                                                                                                             {
                                                                                                                 "command": "EVENT_SET_VALUE",
@@ -7944,11 +8603,11 @@
                                                                                                                         "value": 21
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "3a9bffaa-e19d-4806-bb27-a0291d6b4735"
+                                                                                                                "id": "7b932b8e-6c3b-405a-8b57-f22d2a3dcb41"
                                                                                                             }
                                                                                                         ]
                                                                                                     },
-                                                                                                    "id": "117a663f-86f5-4eb7-b6d1-76482da5fbea"
+                                                                                                    "id": "d4a1bcfd-8f16-462b-992c-2b11c853ce80"
                                                                                                 }
                                                                                             ],
                                                                                             "true3": [
@@ -7956,7 +8615,7 @@
                                                                                                     "command": "EVENT_GROUP",
                                                                                                     "args": {
                                                                                                         "__label": "Set DesPos",
-                                                                                                        "__collapse": true
+                                                                                                        "__collapse": false
                                                                                                     },
                                                                                                     "children": {
                                                                                                         "true": [
@@ -7966,10 +8625,10 @@
                                                                                                                     "variable": "L1",
                                                                                                                     "value": {
                                                                                                                         "type": "number",
-                                                                                                                        "value": 36
+                                                                                                                        "value": 56
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "39adecd4-b0f9-4c2f-944f-9fd0119cda3a"
+                                                                                                                "id": "0d249ab7-4ec4-4c5d-8d5c-49ee6a7cd043"
                                                                                                             },
                                                                                                             {
                                                                                                                 "command": "EVENT_SET_VALUE",
@@ -7980,11 +8639,11 @@
                                                                                                                         "value": 21
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "29375a3b-dd2e-4991-b698-0c598310ef75"
+                                                                                                                "id": "0c5b700b-8d37-4005-920c-fff0141b51c8"
                                                                                                             }
                                                                                                         ]
                                                                                                     },
-                                                                                                    "id": "324fe984-a0ce-45d3-9a06-bd8c4dcfb90c"
+                                                                                                    "id": "626e8930-8201-4942-9433-73173155188b"
                                                                                                 }
                                                                                             ],
                                                                                             "true4": [
@@ -7992,7 +8651,7 @@
                                                                                                     "command": "EVENT_GROUP",
                                                                                                     "args": {
                                                                                                         "__label": "Set DesPos",
-                                                                                                        "__collapse": true
+                                                                                                        "__collapse": false
                                                                                                     },
                                                                                                     "children": {
                                                                                                         "true": [
@@ -8002,10 +8661,10 @@
                                                                                                                     "variable": "L1",
                                                                                                                     "value": {
                                                                                                                         "type": "number",
-                                                                                                                        "value": 36
+                                                                                                                        "value": 56
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "b3ab4fd7-a136-42f8-83d6-d7c06f6c49b3"
+                                                                                                                "id": "7019907f-72a3-428c-b578-47ee1ba80b67"
                                                                                                             },
                                                                                                             {
                                                                                                                 "command": "EVENT_SET_VALUE",
@@ -8016,11 +8675,11 @@
                                                                                                                         "value": 33
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "005b4b1c-6c97-49b0-977e-2a1d23a84cce"
+                                                                                                                "id": "da79f085-771d-4721-b96b-7a85232072c8"
                                                                                                             }
                                                                                                         ]
                                                                                                     },
-                                                                                                    "id": "b61b767f-2c90-4e4a-b4dc-a484b7637230"
+                                                                                                    "id": "4b1faa87-ac17-4fc8-a560-3e5451788cbf"
                                                                                                 }
                                                                                             ],
                                                                                             "true5": [
@@ -8028,7 +8687,7 @@
                                                                                                     "command": "EVENT_GROUP",
                                                                                                     "args": {
                                                                                                         "__label": "Set DesPos",
-                                                                                                        "__collapse": true
+                                                                                                        "__collapse": false
                                                                                                     },
                                                                                                     "children": {
                                                                                                         "true": [
@@ -8038,10 +8697,10 @@
                                                                                                                     "variable": "L1",
                                                                                                                     "value": {
                                                                                                                         "type": "number",
-                                                                                                                        "value": 32
+                                                                                                                        "value": 52
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "211e19f1-d3f0-4545-b440-eb837397658e"
+                                                                                                                "id": "e868517e-f05a-4d63-ae53-8d6c70c2d989"
                                                                                                             },
                                                                                                             {
                                                                                                                 "command": "EVENT_SET_VALUE",
@@ -8052,11 +8711,11 @@
                                                                                                                         "value": 33
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "ba9aaee1-ce96-4a0f-953e-39bbe9084342"
+                                                                                                                "id": "0f83f496-8891-4a8f-9bde-d8d69c90d352"
                                                                                                             }
                                                                                                         ]
                                                                                                     },
-                                                                                                    "id": "dd1d1a2f-64d0-4552-ac78-a50524458cd3"
+                                                                                                    "id": "f74b91a5-0f09-42af-97e6-45e52fc6ba79"
                                                                                                 }
                                                                                             ],
                                                                                             "true6": [
@@ -8064,7 +8723,7 @@
                                                                                                     "command": "EVENT_GROUP",
                                                                                                     "args": {
                                                                                                         "__label": "Set DesPos",
-                                                                                                        "__collapse": true
+                                                                                                        "__collapse": false
                                                                                                     },
                                                                                                     "children": {
                                                                                                         "true": [
@@ -8074,10 +8733,10 @@
                                                                                                                     "variable": "L1",
                                                                                                                     "value": {
                                                                                                                         "type": "number",
-                                                                                                                        "value": 26
+                                                                                                                        "value": 46
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "15a9dace-29f4-4540-97d0-0f06aaf120e1"
+                                                                                                                "id": "8cc72dd5-96df-487d-b693-4e821c0c413d"
                                                                                                             },
                                                                                                             {
                                                                                                                 "command": "EVENT_SET_VALUE",
@@ -8088,11 +8747,11 @@
                                                                                                                         "value": 33
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "ea1f1b8e-0fdc-4019-9331-68d9f227caab"
+                                                                                                                "id": "063ca5d0-97ed-4ede-acbf-d58dd70a4b2d"
                                                                                                             }
                                                                                                         ]
                                                                                                     },
-                                                                                                    "id": "162ab20c-72ad-4e22-ae6d-4f51e7884b18"
+                                                                                                    "id": "d414a181-2eaa-4730-b481-413f5513f05b"
                                                                                                 }
                                                                                             ],
                                                                                             "true7": [
@@ -8110,10 +8769,10 @@
                                                                                                                     "variable": "L1",
                                                                                                                     "value": {
                                                                                                                         "type": "number",
-                                                                                                                        "value": 22
+                                                                                                                        "value": 42
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "63a54e95-8a49-42ac-8e11-862fb064be8a"
+                                                                                                                "id": "cb0befc3-7390-40ab-ba75-7603bdd8b37f"
                                                                                                             },
                                                                                                             {
                                                                                                                 "command": "EVENT_SET_VALUE",
@@ -8124,11 +8783,11 @@
                                                                                                                         "value": 33
                                                                                                                     }
                                                                                                                 },
-                                                                                                                "id": "21d48455-8449-47a9-b4c4-83df002ea65f"
+                                                                                                                "id": "86ca80da-6d83-4a6c-9d0b-c28d090f0c9f"
                                                                                                             }
                                                                                                         ]
                                                                                                     },
-                                                                                                    "id": "d57d6923-1c95-4341-963d-185e06fba771"
+                                                                                                    "id": "97af44ee-aca0-455c-ae25-693e21536094"
                                                                                                 }
                                                                                             ],
                                                                                             "true8": [],
@@ -8141,19 +8800,19 @@
                                                                                             "true15": [],
                                                                                             "false": []
                                                                                         },
-                                                                                        "id": "9fcdee4b-6550-404d-af9c-134d52ce58f5"
+                                                                                        "id": "143f188d-3588-4fb9-a115-c8213ffb30a1"
                                                                                     }
                                                                                 ]
                                                                             },
-                                                                            "id": "c9cdc059-5c6c-4aed-8d74-22e254f440d9"
+                                                                            "id": "1fe92804-627a-4916-80f4-e18c822b27ce"
                                                                         }
                                                                     ]
                                                                 },
-                                                                "id": "59aef95d-1615-4e8e-ae34-2be5665f74ea"
+                                                                "id": "ed98a96a-6a97-4668-a9ca-ae8d694fcb72"
                                                             }
                                                         ]
                                                     },
-                                                    "id": "e19ca240-100e-4e95-800d-4d47f3aa2e41"
+                                                    "id": "d0958de7-b113-4dcf-929e-a173b2531659"
                                                 }
                                             ],
                                             "false": [
@@ -8173,27 +8832,159 @@
                                                         "useCollisions": false,
                                                         "__collapse": false
                                                     },
-                                                    "id": "ca932df6-c476-4669-893e-8c3b80afb43a"
+                                                    "id": "e5742b55-c2d7-43fe-b098-ae273932af0c"
                                                 }
                                             ]
                                         },
-                                        "id": "52f6c751-5274-4bad-942c-2aa23292d6bd"
+                                        "id": "4909875e-8c7e-4f64-b823-6d645f91989a"
                                     }
                                 ],
                                 "false": []
                             },
-                            "id": "574c9c19-caa9-47b4-937f-622ae1cddb4a"
+                            "id": "1e9b0982-0ed5-408f-9a77-90d5a9921b60"
                         }
                     ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
-                    "id": "d2670703-8770-4664-9124-0614955ea634",
-                    "x": 3,
+                    "id": "befd9a8f-4e47-43a5-9b75-e2c1763c0065",
+                    "x": 41,
                     "y": 7
                 }
             ],
-            "triggers": [],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "75eda16c-ecf2-45e3-a5cf-e255e3a4bc4a",
+                    "x": 40,
+                    "y": 20,
+                    "symbol": "trigger_0",
+                    "width": 1,
+                    "height": 14,
+                    "script": [
+                        {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "14",
+                                "value": {
+                                    "type": "number",
+                                    "value": 1
+                                }
+                            },
+                            "id": "c32f8f0a-cb20-4102-8287-bfab70628fbb"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "c482556c-a58e-443d-984d-228676883545",
+                    "x": 22,
+                    "y": 36,
+                    "symbol": "trigger_1",
+                    "width": 16,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "14",
+                                "value": {
+                                    "type": "number",
+                                    "value": 3
+                                }
+                            },
+                            "id": "145f5dcf-176a-492d-b5e7-19e18326586d"
+                        }
+                    ],
+                    "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "61fe1800-36f5-42c4-a8b7-710c1db98ddb",
+                    "x": 39,
+                    "y": 20,
+                    "symbol": "trigger_2",
+                    "width": 1,
+                    "height": 14,
+                    "script": [
+                        {
+                            "command": "EVENT_IF_FLAGS_COMPARE",
+                            "args": {
+                                "variable": "13",
+                                "flag": 1,
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_SET_VALUE",
+                                        "args": {
+                                            "variable": "14",
+                                            "value": {
+                                                "type": "number",
+                                                "value": 0
+                                            }
+                                        },
+                                        "id": "fd0e2864-ba28-4421-9420-077a9ad71b95"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_SET_INPUT_SCRIPT",
+                                        "args": {
+                                            "input": [
+                                                "right"
+                                            ],
+                                            "override": true,
+                                            "__scriptTabs": "press"
+                                        },
+                                        "children": {
+                                            "true": []
+                                        },
+                                        "id": "496a559a-de34-4028-8ca5-5fff282c5c7f"
+                                    }
+                                ]
+                            },
+                            "id": "0a9276cd-05f2-47fe-8bfe-6d700376bf2c"
+                        }
+                    ],
+                    "leaveScript": [
+                        {
+                            "command": "EVENT_REMOVE_INPUT_SCRIPT",
+                            "args": {
+                                "input": [
+                                    "right"
+                                ]
+                            },
+                            "id": "c2179aa3-db8b-42f3-92c6-4bd84aff7301"
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "id": "fdbfb202-982f-4eca-a5c1-705381d0b36c",
+                    "x": 22,
+                    "y": 35,
+                    "symbol": "trigger_3",
+                    "width": 16,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "14",
+                                "value": {
+                                    "type": "number",
+                                    "value": 0
+                                }
+                            },
+                            "id": "95c60d59-3e0a-437c-a2e1-448a43c73707"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
             "script": [
                 {
                     "command": "EVENT_PALETTE_SET_BACKGROUND",
@@ -8377,7 +9168,7 @@
                 {
                     "command": "EVENT_GROUP",
                     "args": {
-                        "__label": "Initialize Temps"
+                        "__label": "Initialize Vars"
                     },
                     "children": {
                         "true": [
@@ -8394,6 +9185,17 @@
                                     "variable": "T1"
                                 },
                                 "id": "972ace1c-243e-495f-87c1-5204c719a798"
+                            },
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "14",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 0
+                                    }
+                                },
+                                "id": "77aedc41-42a8-4f2b-b11a-67b4dee574d1"
                             }
                         ]
                     },
@@ -8494,78 +9296,180 @@
                                 "children": {
                                     "true0": [
                                         {
-                                            "command": "EVENT_GROUP",
+                                            "command": "EVENT_IF_FLAGS_COMPARE",
                                             "args": {
-                                                "__label": "Unlock Ward 1 - 2D",
-                                                "__collapse": false
+                                                "variable": "13",
+                                                "flag": 0,
+                                                "__collapseElse": false
                                             },
                                             "children": {
                                                 "true": [
                                                     {
-                                                        "command": "EVENT_ADD_FLAGS",
+                                                        "command": "EVENT_IF_FLAGS_COMPARE",
                                                         "args": {
                                                             "variable": "13",
-                                                            "flag1": true,
-                                                            "flag2": false,
-                                                            "flag3": false,
-                                                            "flag4": false,
-                                                            "flag5": false,
-                                                            "flag6": false,
-                                                            "flag7": false,
-                                                            "flag8": false,
-                                                            "flag9": false,
-                                                            "flag10": false,
-                                                            "flag11": false,
-                                                            "flag12": false,
-                                                            "flag13": false,
-                                                            "flag14": false,
-                                                            "flag15": false,
-                                                            "flag16": false,
-                                                            "__collapse": true
+                                                            "flag": 1,
+                                                            "__collapseElse": true
                                                         },
-                                                        "id": "d8f683d6-b8c9-4a99-90ea-9b462b001d5b"
-                                                    },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_GROUP",
+                                                                    "args": {
+                                                                        "__label": "Unlock Ward 2 - 2D",
+                                                                        "__collapse": false
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_TEXT",
+                                                                                "args": {
+                                                                                    "text": [
+                                                                                        "Demand Increased &\nCompetitor arrives"
+                                                                                    ],
+                                                                                    "avatarId": "",
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "e6d7cf30-4369-45db-848f-ac5f3da045b1"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ADD_FLAGS",
+                                                                                "args": {
+                                                                                    "variable": "13",
+                                                                                    "flag1": false,
+                                                                                    "flag2": false,
+                                                                                    "flag3": true,
+                                                                                    "flag4": false,
+                                                                                    "flag5": false,
+                                                                                    "flag6": false,
+                                                                                    "flag7": false,
+                                                                                    "flag8": false,
+                                                                                    "flag9": false,
+                                                                                    "flag10": false,
+                                                                                    "flag11": false,
+                                                                                    "flag12": false,
+                                                                                    "flag13": false,
+                                                                                    "flag14": false,
+                                                                                    "flag15": false,
+                                                                                    "flag16": false,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "22881886-9254-4291-a385-2a518b3ab45d"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_START_UPDATE",
+                                                                                "args": {
+                                                                                    "actorId": "43c87bc5-aeed-4472-ad48-ff16d327b3b7"
+                                                                                },
+                                                                                "id": "a2a872e3-387d-441e-9af5-ca5d0231d760"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_START_UPDATE",
+                                                                                "args": {
+                                                                                    "actorId": "befd9a8f-4e47-43a5-9b75-e2c1763c0065"
+                                                                                },
+                                                                                "id": "954f8a3e-8909-41e7-894f-135116caa599"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_MOVE_TO",
+                                                                                "args": {
+                                                                                    "actorId": "befd9a8f-4e47-43a5-9b75-e2c1763c0065",
+                                                                                    "x": {
+                                                                                        "type": "number",
+                                                                                        "value": 42
+                                                                                    },
+                                                                                    "y": {
+                                                                                        "type": "number",
+                                                                                        "value": 21
+                                                                                    },
+                                                                                    "moveType": "horizontal",
+                                                                                    "useCollisions": false
+                                                                                },
+                                                                                "id": "5db3453e-3dba-415d-9c64-401545be364c"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "352adc66-3ea5-4e52-b36d-01d5167927db"
+                                                                }
+                                                            ],
+                                                            "false": []
+                                                        },
+                                                        "id": "1835acb1-3a0f-454b-9eda-6f0dcd4f09ff"
+                                                    }
+                                                ],
+                                                "false": [
                                                     {
-                                                        "command": "EVENT_ACTOR_START_UPDATE",
+                                                        "command": "EVENT_GROUP",
                                                         "args": {
-                                                            "actorId": "6d7543c8-66bf-4f41-8dc0-65e7d38e2d17"
+                                                            "__label": "Unlock Ward 1 - 2D",
+                                                            "__collapse": false
                                                         },
-                                                        "id": "5441e5df-7977-4efc-b86c-f8bbfaaf4b72"
-                                                    },
-                                                    {
-                                                        "command": "EVENT_ACTOR_START_UPDATE",
-                                                        "args": {
-                                                            "actorId": "d2670703-8770-4664-9124-0614955ea634"
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_TEXT",
+                                                                    "args": {
+                                                                        "text": [
+                                                                            "Demand Increased &\nCompetitor arrives"
+                                                                        ],
+                                                                        "avatarId": "",
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "e7ace7bd-fe80-4252-a9db-32de39ec5e2a"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_ADD_FLAGS",
+                                                                    "args": {
+                                                                        "variable": "13",
+                                                                        "flag1": true,
+                                                                        "flag2": false,
+                                                                        "flag3": false,
+                                                                        "flag4": false,
+                                                                        "flag5": false,
+                                                                        "flag6": false,
+                                                                        "flag7": false,
+                                                                        "flag8": false,
+                                                                        "flag9": false,
+                                                                        "flag10": false,
+                                                                        "flag11": false,
+                                                                        "flag12": false,
+                                                                        "flag13": false,
+                                                                        "flag14": false,
+                                                                        "flag15": false,
+                                                                        "flag16": false,
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "d8f683d6-b8c9-4a99-90ea-9b462b001d5b"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_ACTOR_START_UPDATE",
+                                                                    "args": {
+                                                                        "actorId": "6d7543c8-66bf-4f41-8dc0-65e7d38e2d17"
+                                                                    },
+                                                                    "id": "5441e5df-7977-4efc-b86c-f8bbfaaf4b72"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_ACTOR_START_UPDATE",
+                                                                    "args": {
+                                                                        "actorId": "d2670703-8770-4664-9124-0614955ea634"
+                                                                    },
+                                                                    "id": "93dce4de-70cb-4fdc-8a7e-99109b3aec65"
+                                                                }
+                                                            ]
                                                         },
-                                                        "id": "93dce4de-70cb-4fdc-8a7e-99109b3aec65"
-                                                    },
-                                                    {
-                                                        "command": "EVENT_ACTOR_MOVE_TO",
-                                                        "args": {
-                                                            "actorId": "d2670703-8770-4664-9124-0614955ea634",
-                                                            "x": {
-                                                                "type": "number",
-                                                                "value": 22
-                                                            },
-                                                            "y": {
-                                                                "type": "number",
-                                                                "value": 21
-                                                            },
-                                                            "moveType": "horizontal",
-                                                            "useCollisions": false
-                                                        },
-                                                        "id": "4e75047c-4ab7-4d38-92ec-c38214888f17"
+                                                        "id": "ae6050d1-4db6-4673-aced-e4f0eaba6164"
                                                     }
                                                 ]
                                             },
-                                            "id": "ae6050d1-4db6-4673-aced-e4f0eaba6164"
+                                            "id": "9ab87742-8f6c-4fd4-a58c-11e2ce0f5bd1"
                                         }
                                     ],
                                     "true1": [
                                         {
                                             "command": "EVENT_GROUP",
                                             "args": {
-                                                "__label": "Unlock Ward 2 & Ward 2 - 2D"
+                                                "__label": "Unlock Ward 2 & Ward 2 - 1D",
+                                                "__collapse": false
                                             },
                                             "children": {
                                                 "true": [
@@ -8612,6 +9516,15 @@
                                                             "palette7": "keep"
                                                         },
                                                         "id": "11847d0d-2e3a-432e-9719-948144b6286c"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_REMOVE_INPUT_SCRIPT",
+                                                        "args": {
+                                                            "input": [
+                                                                "right"
+                                                            ]
+                                                        },
+                                                        "id": "8fae7080-3c9f-4283-b476-48c28ced46f2"
                                                     }
                                                 ]
                                             },
@@ -8655,10 +9568,10 @@
                         "closeWhen": "notModal",
                         "closeButton": "a",
                         "text": [
-                            "Deliver Pizza!      "
+                            "                    \nDeliver Pizza!      "
                         ],
                         "avatarId": "",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "d6319052-40b2-4dde-9e2a-e5e807a03a72"
                 },
@@ -18875,6 +19788,31 @@
             "id": "d2670703-8770-4664-9124-0614955ea634__L3",
             "name": "Should",
             "symbol": "var_should"
+        },
+        {
+            "id": "befd9a8f-4e47-43a5-9b75-e2c1763c0065__L0",
+            "name": "Destination",
+            "symbol": "var_destination"
+        },
+        {
+            "id": "befd9a8f-4e47-43a5-9b75-e2c1763c0065__L1",
+            "name": "DesX",
+            "symbol": "var_desx_1"
+        },
+        {
+            "id": "befd9a8f-4e47-43a5-9b75-e2c1763c0065__L2",
+            "name": "DesY",
+            "symbol": "var_desy_1"
+        },
+        {
+            "id": "befd9a8f-4e47-43a5-9b75-e2c1763c0065__L3",
+            "name": "Should",
+            "symbol": "var_should_0"
+        },
+        {
+            "id": "14",
+            "name": "Current Ward",
+            "symbol": "var_current_ward"
         }
     ],
     "engineFieldValues": [
@@ -18924,7 +19862,7 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": "selected",
-        "worldScrollX": 0,
+        "worldScrollX": 106,
         "worldScrollY": 61,
         "zoom": 100,
         "customColorsEnabled": true,
