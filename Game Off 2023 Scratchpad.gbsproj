@@ -9321,13 +9321,13 @@
                                 "command": "EVENT_SWITCH",
                                 "args": {
                                     "variable": "T0",
-                                    "choices": 2,
-                                    "__collapseCase0": false,
+                                    "choices": 3,
+                                    "__collapseCase0": true,
                                     "value0": 1,
-                                    "__collapseCase1": false,
+                                    "__collapseCase1": true,
                                     "value1": 4,
                                     "__collapseCase2": false,
-                                    "value2": 3,
+                                    "value2": 2,
                                     "__collapseCase3": false,
                                     "value3": 4,
                                     "__collapseCase4": false,
@@ -9633,7 +9633,39 @@
                                             "id": "5a07fad9-0e95-446e-85ae-87f1739f9901"
                                         }
                                     ],
-                                    "true2": [],
+                                    "true2": [
+                                        {
+                                            "command": "EVENT_ADD_FLAGS",
+                                            "args": {
+                                                "variable": "13",
+                                                "flag1": false,
+                                                "flag2": false,
+                                                "flag3": false,
+                                                "flag4": true,
+                                                "flag5": false,
+                                                "flag6": false,
+                                                "flag7": false,
+                                                "flag8": false,
+                                                "flag9": false,
+                                                "flag10": false,
+                                                "flag11": false,
+                                                "flag12": false,
+                                                "flag13": false,
+                                                "flag14": false,
+                                                "flag15": false,
+                                                "flag16": false
+                                            },
+                                            "id": "b8c8cec1-c823-4fac-90aa-f424c290bbf9"
+                                        },
+                                        {
+                                            "command": "EVENT_ACTOR_SET_MOVEMENT_SPEED",
+                                            "args": {
+                                                "actorId": "$self$",
+                                                "speed": 2
+                                            },
+                                            "id": "cc5ca6ed-d979-42d3-967c-63641058d43c"
+                                        }
+                                    ],
                                     "true3": [],
                                     "true4": [],
                                     "true5": [],
@@ -19699,7 +19731,7 @@
                 {
                     "command": "EVENT_COMMENT",
                     "args": {
-                        "text": "# Unlocks\n\n1. Ward 1's Second Delivery\n2. Ward 2 & Ward 2's First Delivery"
+                        "text": "# Unlocks\n\n1. Ward 1's Second Delivery\n2. Ward 2 & Ward 2's First Delivery\n3. Ward 2's Second Delivery\n4. Speed Boost 1"
                     },
                     "id": "d7202bc2-f4cb-45c8-9897-a417c206a23c"
                 }
