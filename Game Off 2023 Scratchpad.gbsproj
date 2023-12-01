@@ -7331,13 +7331,50 @@
                             "id": "4047707e-d62a-47e1-964f-41810191ea51"
                         }
                     ],
-                    "updateScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_VARIABLE_MATH",
+                            "args": {
+                                "vectorX": "L0",
+                                "operation": "set",
+                                "other": "rnd",
+                                "vectorY": "L0",
+                                "value": "0",
+                                "minValue": "0",
+                                "maxValue": 64,
+                                "clamp": false
+                            },
+                            "id": "0861c16c-04b6-41e2-9e7d-fd8af6f14f91"
+                        },
+                        {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "L0",
+                                "operator": "==",
+                                "comparator": "0",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_INC_VALUE",
+                                        "args": {
+                                            "variable": "4"
+                                        },
+                                        "id": "1cd7102f-20dc-40e4-a9f9-28df93dd1a69"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "4e9059de-abff-4ca7-b7a8-fc84d391e5b0"
+                        }
+                    ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "e8b909ff-1270-47d1-ad0d-0ae539465bb3",
-                    "x": 21,
-                    "y": 3
+                    "x": 6,
+                    "y": 7
                 },
                 {
                     "name": "Ward 1 - 2D",
@@ -9231,7 +9268,8 @@
                 {
                     "command": "EVENT_GROUP",
                     "args": {
-                        "__label": "Initialize Vars"
+                        "__label": "Initialize Vars",
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -9321,15 +9359,15 @@
                                 "command": "EVENT_SWITCH",
                                 "args": {
                                     "variable": "T0",
-                                    "choices": 3,
+                                    "choices": 4,
                                     "__collapseCase0": true,
                                     "value0": 1,
                                     "__collapseCase1": true,
                                     "value1": 4,
-                                    "__collapseCase2": false,
+                                    "__collapseCase2": true,
                                     "value2": 2,
                                     "__collapseCase3": false,
-                                    "value3": 4,
+                                    "value3": 3,
                                     "__collapseCase4": false,
                                     "value4": 5,
                                     "__collapseCase5": false,
@@ -9666,7 +9704,30 @@
                                             "id": "cc5ca6ed-d979-42d3-967c-63641058d43c"
                                         }
                                     ],
-                                    "true3": [],
+                                    "true3": [
+                                        {
+                                            "command": "EVENT_ACTOR_SET_POSITION",
+                                            "args": {
+                                                "actorId": "e8b909ff-1270-47d1-ad0d-0ae539465bb3",
+                                                "x": {
+                                                    "type": "number",
+                                                    "value": 20
+                                                },
+                                                "y": {
+                                                    "type": "number",
+                                                    "value": 27
+                                                }
+                                            },
+                                            "id": "48f6f0d9-6f42-4a51-adc5-82becb69236e"
+                                        },
+                                        {
+                                            "command": "EVENT_ACTOR_ACTIVATE",
+                                            "args": {
+                                                "actorId": "e8b909ff-1270-47d1-ad0d-0ae539465bb3"
+                                            },
+                                            "id": "fed23fbe-0a62-4bcb-8ad7-74234a848c14"
+                                        }
+                                    ],
                                     "true4": [],
                                     "true5": [],
                                     "true6": [],
@@ -20043,7 +20104,7 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": "selected",
-        "worldScrollX": 146,
+        "worldScrollX": 252,
         "worldScrollY": 78,
         "zoom": 100,
         "customColorsEnabled": true,
