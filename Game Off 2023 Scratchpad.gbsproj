@@ -1,6 +1,6 @@
 {
     "name": "Pizza Palace",
-    "author": "zone",
+    "author": "Zone Booth",
     "_version": "3.1.0",
     "_release": "3",
     "scenes": [
@@ -8614,7 +8614,19 @@
                                 "__collapseElse": true
                             },
                             "children": {
-                                "true": [],
+                                "true": [
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "da91a8a5-18dd-4298-95e5-9876f80224cb",
+                                            "x": 0,
+                                            "y": 0,
+                                            "direction": "",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "ce18c910-53fd-4535-a18f-8a975b172c0c"
+                                    }
+                                ],
                                 "false": []
                             },
                             "id": "e7b0a232-404f-44d2-b8b9-0423f8b66083"
@@ -8691,7 +8703,7 @@
                                     {
                                         "command": "EVENT_SWITCH_SCENE",
                                         "args": {
-                                            "sceneId": "864534b3-9172-4850-ad57-c29e263bf10d",
+                                            "sceneId": "801b8bd9-7f14-4376-87bb-a36102fa68e3",
                                             "x": 0,
                                             "y": 0,
                                             "direction": "",
@@ -11234,35 +11246,94 @@
             "triggers": [],
             "script": [
                 {
-                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "command": "EVENT_MUSIC_PLAY",
                     "args": {
-                        "input": [
-                            "start"
-                        ],
-                        "override": true,
-                        "__scriptTabs": "press"
+                        "musicId": "cf9a9b3f-fde9-49ea-976c-48c247edc6a6"
+                    },
+                    "id": "21de140c-c373-42e7-87fa-483e8435a4be"
+                },
+                {
+                    "command": "EVENT_IF_COLOR_SUPPORTED",
+                    "args": {
+                        "__collapseElse": false,
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
                             {
-                                "command": "EVENT_RNG_SEED",
-                                "args": {},
-                                "id": "0099a4c9-2a41-40bf-98a5-2aaff4fe1b1f"
+                                "command": "EVENT_SET_INPUT_SCRIPT",
+                                "args": {
+                                    "input": [
+                                        "start"
+                                    ],
+                                    "override": true,
+                                    "__scriptTabs": "press",
+                                    "__collapse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_RNG_SEED",
+                                            "args": {},
+                                            "id": "0099a4c9-2a41-40bf-98a5-2aaff4fe1b1f"
+                                        },
+                                        {
+                                            "command": "EVENT_SWITCH_SCENE",
+                                            "args": {
+                                                "sceneId": "6c01f4ca-88f9-4587-9262-9b02332f7933",
+                                                "x": 26,
+                                                "y": 21,
+                                                "direction": "right",
+                                                "fadeSpeed": "2"
+                                            },
+                                            "id": "04c803cb-10d4-4a0d-bf7b-734f5e566dc9"
+                                        }
+                                    ]
+                                },
+                                "id": "6c0db1ac-b78f-41f3-81ee-3958853d1d50"
                             },
                             {
-                                "command": "EVENT_SWITCH_SCENE",
+                                "command": "EVENT_SET_INPUT_SCRIPT",
                                 "args": {
-                                    "sceneId": "6c01f4ca-88f9-4587-9262-9b02332f7933",
-                                    "x": 26,
-                                    "y": 21,
-                                    "direction": "right",
-                                    "fadeSpeed": "2"
+                                    "input": [
+                                        "select"
+                                    ],
+                                    "override": true,
+                                    "__scriptTabs": "press",
+                                    "__collapse": true
                                 },
-                                "id": "04c803cb-10d4-4a0d-bf7b-734f5e566dc9"
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_SWITCH_SCENE",
+                                            "args": {
+                                                "sceneId": "66379cb4-0b94-482c-b319-cf6929e6116e",
+                                                "x": 0,
+                                                "y": 0,
+                                                "direction": "",
+                                                "fadeSpeed": "2"
+                                            },
+                                            "id": "18dbd119-6509-412a-ab51-64f1ca72a39b"
+                                        }
+                                    ]
+                                },
+                                "id": "a95f9e8e-a164-42bf-ab6d-6b63e1fd3369"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "This game is only for Gameboy Color"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "d98bf518-9191-46d2-b784-e63d47d711d0"
                             }
                         ]
                     },
-                    "id": "6c0db1ac-b78f-41f3-81ee-3958853d1d50"
+                    "id": "cca453cb-8ec0-4047-a42a-d6ecede346a5"
                 }
             ],
             "playerHit1Script": [],
@@ -11275,7 +11346,7 @@
             "backgroundId": "b38ca569-b571-41e8-ab10-6a9a964f60a1",
             "width": 20,
             "height": 18,
-            "type": "LOGO",
+            "type": "TOPDOWN",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [
@@ -11649,6 +11720,39 @@
             "triggers": [],
             "script": [
                 {
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "start"
+                        ],
+                        "override": true,
+                        "__scriptTabs": "press"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "864534b3-9172-4850-ad57-c29e263bf10d",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                },
+                                "id": "8e7f8b71-e88a-4432-aadd-9d2a65b532b8"
+                            }
+                        ]
+                    },
+                    "id": "a3034f82-bc8c-4063-b4fe-6784bd54619d"
+                },
+                {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "abcbe540-0590-4079-855b-2af5e3b7927f"
+                    },
+                    "id": "e1d0a119-962d-4893-bfa5-6e647b59743c"
+                },
+                {
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
@@ -11685,7 +11789,7 @@
             "backgroundId": "b38ca569-b571-41e8-ab10-6a9a964f60a1",
             "width": 20,
             "height": 18,
-            "type": "TOPDOWN",
+            "type": "LOGO",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [
@@ -12057,7 +12161,41 @@
             "y": 92,
             "actors": [],
             "triggers": [],
-            "script": [],
+            "script": [
+                {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "bb923ad3-6714-4073-9ac1-ff2da0413c32"
+                    },
+                    "id": "2c10e016-b481-4586-b111-0bda38bfa93e"
+                },
+                {
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "start"
+                        ],
+                        "override": true,
+                        "__scriptTabs": "press"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "864534b3-9172-4850-ad57-c29e263bf10d",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                },
+                                "id": "e2286092-ee49-479a-a0fc-cb4b389df526"
+                            }
+                        ]
+                    },
+                    "id": "04d22a25-49f5-4c10-8483-3f7cd7118372"
+                }
+            ],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": []
@@ -12067,7 +12205,7 @@
             "backgroundId": "b38ca569-b571-41e8-ab10-6a9a964f60a1",
             "width": 20,
             "height": 18,
-            "type": "TOPDOWN",
+            "type": "LOGO",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [
@@ -12439,7 +12577,41 @@
             "y": 285,
             "actors": [],
             "triggers": [],
-            "script": [],
+            "script": [
+                {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "c04741b2-b75f-43c5-b285-c2404033747b"
+                    },
+                    "id": "17690094-023b-4a82-a5d2-bfb4ca442193"
+                },
+                {
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "start"
+                        ],
+                        "override": true,
+                        "__scriptTabs": "press"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "864534b3-9172-4850-ad57-c29e263bf10d",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                },
+                                "id": "094b13af-4942-4c57-a185-75c03bd5d3db"
+                            }
+                        ]
+                    },
+                    "id": "9a57f9f3-fe95-4fc4-96ae-4d3643f49ddd"
+                }
+            ],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": []
@@ -22885,6 +23057,38 @@
             "type": "mod"
         },
         {
+            "id": "bb923ad3-6714-4073-9ac1-ff2da0413c32",
+            "name": "Another Time Perhaps Slow",
+            "symbol": "song_another_time_perhaps_s",
+            "filename": "Another Time Perhaps Slow.mod",
+            "settings": {},
+            "type": "mod"
+        },
+        {
+            "id": "cf9a9b3f-fde9-49ea-976c-48c247edc6a6",
+            "name": "Countersunk Fast",
+            "symbol": "song_countersunk_fast",
+            "filename": "Countersunk Fast.mod",
+            "settings": {},
+            "type": "mod"
+        },
+        {
+            "id": "abcbe540-0590-4079-855b-2af5e3b7927f",
+            "name": "Curiosity",
+            "symbol": "song_curiosity",
+            "filename": "Curiosity.mod",
+            "settings": {},
+            "type": "mod"
+        },
+        {
+            "id": "c04741b2-b75f-43c5-b285-c2404033747b",
+            "name": "Just Breathe",
+            "symbol": "song_just_breathe",
+            "filename": "Just Breathe.mod",
+            "settings": {},
+            "type": "mod"
+        },
+        {
             "id": "c9fa59ed-191b-4f49-81fc-a4642740fe16",
             "name": "SFX Unlocked",
             "symbol": "song_sfx_unlocked",
@@ -23989,7 +24193,7 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": "selected",
-        "worldScrollX": 53,
+        "worldScrollX": 0,
         "worldScrollY": 61,
         "zoom": 100,
         "customColorsEnabled": true,
@@ -24027,12 +24231,12 @@
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
         "defaultCharacterEncoding": "",
         "defaultPlayerSprites": {
-            "TOPDOWN": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
+            "TOPDOWN": "776a711e-880c-48cf-ad80-e2c57163f940",
             "PLATFORM": "714768bc-de82-411a-9dda-ee9418718f1d",
             "ADVENTURE": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
             "SHMUP": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
-            "POINTNCLICK": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
-            "LOGO": "581d34d0-9591-4e6e-a609-1d94f203b0cd"
+            "POINTNCLICK": "776a711e-880c-48cf-ad80-e2c57163f940",
+            "LOGO": "776a711e-880c-48cf-ad80-e2c57163f940"
         },
         "musicDriver": "gbt",
         "cartType": "mbc5",
