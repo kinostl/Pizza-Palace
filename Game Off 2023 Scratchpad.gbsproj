@@ -8635,6 +8635,35 @@
                         {
                             "command": "EVENT_IF_VALUE",
                             "args": {
+                                "variable": "4",
+                                "operator": ">=",
+                                "comparator": 450,
+                                "__collapseElse": true,
+                                "__collapse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                                        "args": {
+                                            "type": "6d2e5615-22dd-4106-8b13-7b216b239fa0",
+                                            "priority": "medium",
+                                            "pitch": 4,
+                                            "frequency": 200,
+                                            "duration": 0.5,
+                                            "wait": true,
+                                            "effect": 0
+                                        },
+                                        "id": "d9c9e53a-638c-41c8-99ba-2328dd8230c4"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "d558e92e-a0ac-4160-8e4d-21a3b674dac3"
+                        },
+                        {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
                                 "variable": "23",
                                 "operator": ">=",
                                 "comparator": 500,
@@ -8674,7 +8703,7 @@
                                 "operator": ">=",
                                 "comparator": 450,
                                 "__collapseElse": true,
-                                "__collapse": true
+                                "__collapse": false
                             },
                             "children": {
                                 "true": [
@@ -30986,7 +31015,7 @@
                                 "id": "6"
                             }
                         ],
-                        "script": "START_SPAWN_WARD_1 = .\n\nVM_RAND VAR_WARD_1_X, 20, 19\nVM_RAND VAR_WARD_1_Y, 18, 17\n\nVM_GET_TILE_XY VAR_WARD_1_CURRENT_TILE, VAR_WARD_1_X, VAR_WARD_1_Y\n\nVM_IF .EQ, VAR_WARD_1_CURRENT_TILE, VAR_WARD_1_APARTMENT_TILE,     CONT_SPAWN_WARD_1, 0\nVM_IF .EQ, VAR_WARD_1_CURRENT_TILE, VAR_WARD_1_HOUSE_TILE, CONT_SPAWN_WARD_1, 0\nVM_IF .EQ, VAR_WARD_1_CURRENT_TILE, VAR_WARD_1_OFFICE_TILE,    CONT_SPAWN_WARD_1, 0\n\nVM_JUMP START_SPAWN_WARD_1\n\nCONT_SPAWN_WARD_1 = .",
+                        "script": "START_SPAWN_WARD_1 = .\n\nVM_RAND VAR_WARD_1_X, 20, 19\nVM_RAND VAR_WARD_1_Y, 18, 35\n\nVM_GET_TILE_XY VAR_WARD_1_CURRENT_TILE, VAR_WARD_1_X, VAR_WARD_1_Y\n\nVM_IF .EQ, VAR_WARD_1_CURRENT_TILE, VAR_WARD_1_APARTMENT_TILE,     CONT_SPAWN_WARD_1, 0\nVM_IF .EQ, VAR_WARD_1_CURRENT_TILE, VAR_WARD_1_HOUSE_TILE, CONT_SPAWN_WARD_1, 0\nVM_IF .EQ, VAR_WARD_1_CURRENT_TILE, VAR_WARD_1_OFFICE_TILE,    CONT_SPAWN_WARD_1, 0\n\nVM_JUMP START_SPAWN_WARD_1\n\nCONT_SPAWN_WARD_1 = .",
                         "__comment": false
                     },
                     "id": "4ceb2da8-5aa3-4b9f-9242-e13e340a1c33"
@@ -31030,7 +31059,7 @@
                                 "id": "10"
                             }
                         ],
-                        "script": "START_SPAWN_WARD_2 = .\n\nVM_RAND VAR_WARD_2_X, 40, 19\nVM_RAND VAR_WARD_2_Y, 18, 17\n\nVM_GET_TILE_XY VAR_WARD_2_CURRENT_TILE, VAR_WARD_2_X, VAR_WARD_2_Y\n\nVM_IF .EQ, VAR_WARD_2_CURRENT_TILE, VAR_WARD_2_APARTMENT_TILE, CONT_SPAWN_WARD_2, 0\nVM_IF .EQ, VAR_WARD_2_CURRENT_TILE, VAR_WARD_2_HOUSE_TILE, CONT_SPAWN_WARD_2, 0\nVM_IF .EQ, VAR_WARD_2_CURRENT_TILE, VAR_WARD_2_OFFICE_TILE, CONT_SPAWN_WARD_2, 0\n\nVM_JUMP START_SPAWN_WARD_2\n\nCONT_SPAWN_WARD_2 = .",
+                        "script": "START_SPAWN_WARD_2 = .\n\nVM_RAND VAR_WARD_2_X, 40, 19\nVM_RAND VAR_WARD_2_Y, 18, 35\n\nVM_GET_TILE_XY VAR_WARD_2_CURRENT_TILE, VAR_WARD_2_X, VAR_WARD_2_Y\n\nVM_IF .EQ, VAR_WARD_2_CURRENT_TILE, VAR_WARD_2_APARTMENT_TILE, CONT_SPAWN_WARD_2, 0\nVM_IF .EQ, VAR_WARD_2_CURRENT_TILE, VAR_WARD_2_HOUSE_TILE, CONT_SPAWN_WARD_2, 0\nVM_IF .EQ, VAR_WARD_2_CURRENT_TILE, VAR_WARD_2_OFFICE_TILE, CONT_SPAWN_WARD_2, 0\n\nVM_JUMP START_SPAWN_WARD_2\n\nCONT_SPAWN_WARD_2 = .",
                         "__comment": false
                     },
                     "id": "b0b4e7a8-0b70-4eb9-9f44-7dca89f8a369"
@@ -31664,7 +31693,7 @@
                                 "id": "15"
                             }
                         ],
-                        "script": "START_SPAWN_WARD_3 = .\n\nVM_RAND VAR_WARD_3_X, 60, 19\nVM_RAND VAR_WARD_3_Y, 18, 17\n\nVM_GET_TILE_XY VAR_WARD_3_CURRENT_TILE, VAR_WARD_3_X, VAR_WARD_3_Y\n\nVM_IF .EQ, VAR_WARD_3_CURRENT_TILE, VAR_WARD_3_APARTMENT_TILE, CONT_SPAWN_WARD_3, 0\nVM_IF .EQ, VAR_WARD_3_CURRENT_TILE, VAR_WARD_3_HOUSE_TILE, CONT_SPAWN_WARD_3, 0\nVM_IF .EQ, VAR_WARD_3_CURRENT_TILE, VAR_WARD_3_OFFICE_TILE, CONT_SPAWN_WARD_3, 0\n\nVM_JUMP START_SPAWN_WARD_3\n\nCONT_SPAWN_WARD_3 = .",
+                        "script": "START_SPAWN_WARD_3 = .\n\nVM_RAND VAR_WARD_3_X, 60, 19\nVM_RAND VAR_WARD_3_Y, 18, 35\n\nVM_GET_TILE_XY VAR_WARD_3_CURRENT_TILE, VAR_WARD_3_X, VAR_WARD_3_Y\n\nVM_IF .EQ, VAR_WARD_3_CURRENT_TILE, VAR_WARD_3_APARTMENT_TILE, CONT_SPAWN_WARD_3, 0\nVM_IF .EQ, VAR_WARD_3_CURRENT_TILE, VAR_WARD_3_HOUSE_TILE, CONT_SPAWN_WARD_3, 0\nVM_IF .EQ, VAR_WARD_3_CURRENT_TILE, VAR_WARD_3_OFFICE_TILE, CONT_SPAWN_WARD_3, 0\n\nVM_JUMP START_SPAWN_WARD_3\n\nCONT_SPAWN_WARD_3 = .",
                         "__comment": false
                     },
                     "id": "ed28c7a4-6ea7-41ed-9634-59f35c060663"
@@ -32999,8 +33028,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": "selected",
-        "worldScrollX": 1041,
-        "worldScrollY": 865,
+        "worldScrollX": 1147,
+        "worldScrollY": 547,
         "zoom": 200,
         "customColorsEnabled": true,
         "sgbEnabled": false,
